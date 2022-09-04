@@ -1,0 +1,2973 @@
+@charset 'UTF-8';
+
+// base.scssの呼び出し
+@use '../common/scss/_modules/base' as base;			// ← _modules内の_base.scss
+
+main {
+    //margin-top: -65px;
+}
+
+.head {
+    @include base.mq(tab) {
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        width: 100%;
+        height: 65px;
+        padding-bottom: 65px;
+        background-color: base.$blue_color;
+    }
+
+    &__logo {
+        position: relative;
+        top: 0;
+        left: 15px;
+        width: 120px;
+        height: 35px;
+        margin: 15px 0 15px 0;
+        @include base.mq(tab) {
+            left: 35px;
+        }
+        @include base.mq(pc) {
+            left: 140px;
+        }
+    }
+    &__bigBox {
+        display: none;
+        @include base.mq(tab) {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+
+    // PCサイズのナビゲーション
+     &__itemPC {
+        display: none;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 65px;
+        color: base.$white_color;
+
+        & li {
+            cursor: pointer;
+        }
+        @include base.mq(tab) {
+            display: flex;
+            padding-right: 35px;
+            & li {
+                margin-left: 10px;
+            }
+        }
+        @include base.mq(pc) {
+            padding-right: 140px;
+            & li {
+                margin-left: 20px;
+            }
+        }
+        @include base.mq(max) {
+            & li {
+                margin-left: 50px;
+            }
+        }
+     }
+
+     &__btnYellow {
+        width: 125px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 4px;
+        position: relative;
+        top: 15px;
+        background-color: base.$yellow_color;
+        color: base.$blue_color;
+     }
+}
+
+// メインヴィジュアルの画像群
+.mainVisual {
+    &__flex {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        @include base.mq(tab) {
+            width: 510px;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+    }
+
+    &__logo {
+        width: 117.6px;
+        @include base.mq(tab) {
+            width: 229px;
+        }
+    }
+
+    &__tilOne {
+        width: 149.29px;
+        height: 19.97px;
+        margin-left: base.sp(8);
+        @include base.mq(tab) {
+            width: 290px;
+            height: 38px;
+        }
+    }
+
+    &__tilTwo {
+        width: 275px;
+        margin-top: 11.8px;
+        @include base.mq(tab) {
+            width: 536px;
+            height: 65px;
+            margin: 11.8px auto 0 auto;
+        }
+    }
+
+    &__tilThree {
+        position: relative;
+        z-index: -8;
+        width: 340px;
+        @include base.mq(tab) {
+            width: 609px;
+            height: 153px;
+            margin: 0 auto;
+        }
+    }
+
+    &__case {
+        position: relative;
+        margin-top: 7.8px;
+    }
+
+    &__starOne {
+        position: absolute;
+        bottom: 50px;
+        left: -10px;
+        @include base.mq(tab) {
+            top: 20px;
+            left: 30px;
+        }
+        @include base.mq(pc) {
+            top: 20px;
+            left: 250px;
+        }
+    }
+
+    &__starTwo {
+        position: absolute;
+        left: 309px;
+        bottom: 60px;
+        @include base.mq(tab) {
+            bottom: 120px;
+            left: 400px;
+        }
+        @include base.mq(tab) {
+            bottom: 120px;
+            left: 850px;
+        }
+    }
+}
+
+.main {
+    // メインヴィジュアル
+    &__til {
+        width: base.sp(335);
+        margin: 0 auto;
+        @include base.mq(tab) {
+            padding-top: 50px;
+        }
+    }
+    &__box {
+        position: relative;
+        padding-top: base.sp(22.3);
+    }
+    &__height {
+        height: 350px;
+    }
+
+    // 背景
+    &__back {
+        width: 375px;
+        position: absolute;
+        left: base.sp(1);
+        padding-top: 185px;
+        z-index: -10;
+        @include base.mq(tab) {
+            display: none;
+        }
+    }
+
+    // 背景PC
+    &__backPc {
+        display: none;
+        @include base.mq(tab) {
+            width: 1280px;
+            height: 585px;
+            display: block;
+            position: absolute;
+            bottom: 0px;
+            z-index: -80;
+        }
+    }
+
+    //車と人物
+    &__img {
+        position: relative;
+        margin-top: 45px;
+    }
+    // 人物
+    &__doumae {
+        position: absolute;
+        left: base.sp(245);
+        top: -90px;
+        width: 131px;
+        z-index: -7;
+        @include base.mq(tab) {
+            width: 207px;
+            top: -320px;
+            left: 620px;
+        }
+        @include base.mq(pc) {
+            width: 207px;
+            top: -320px;
+            left: 900px;
+        }
+    }
+    &__masuyama {
+        position: absolute;
+        top: 70px;
+        right: base.sp(240);
+        width: 140px;
+        @include base.mq(tab) {
+            width: 214px;
+            top: -300px;
+            right: 650px;
+            z-index: -10;
+        }
+        @include base.mq(pc) {
+            width: 214px;
+            top: -300px;
+            right: 880px;
+            z-index: -10;
+        }
+    }
+
+    // 車
+    &__cars {
+        position: relative;
+        width: base.sp(335);
+        margin: 0 auto;
+        @include base.mq(tab) {
+            display: flex;
+        }
+    }
+    &__carOne {
+        position: absolute;
+        width: 228px;
+        left: base.sp(15);
+        z-index: -8;
+        @include base.mq(tab) {
+            width: 360px;
+            position: relative;
+            left: -120px;
+            bottom: 20px;
+        }
+        @include base.mq(pc) {
+            position: relative;
+            left: 120px;
+            bottom: 20px;
+        }
+    }
+    &__carTwo {
+        position: absolute;
+        top: 40px;
+        left: 45px;
+        width: 296px;
+        z-index: -5;
+        @include base.mq(tab) {
+            width: 370px;
+            position: relative;
+            top: -25px;
+            left: -210px;
+        }
+        @include base.mq(pc) {
+            position: relative;
+            left: 0;
+            bottom: 20px;
+        }
+    }
+    &__carThree {
+        position: absolute;
+        top: 95px;
+        left: 75px;
+        width: 314.46px;
+        z-index: -2;
+        @include base.mq(tab) {
+            width: 380px;
+            position: relative;
+            top: -55px;
+            left: -270px;
+        }
+        @include base.mq(pc) {
+            position: relative;
+            left: -120px;
+            bottom: 20px;
+        }
+    }
+
+    // 詳しく見る
+    &__det {
+        position: relative;
+        width: 100%;
+        height: 65px;
+        line-height: 65px;
+        margin-top: 297px;
+        text-align: center;
+        color: base.$white_color;
+        background-color: base.$blue_color;
+        @include base.mq(tab) {
+            margin-top: 0px;
+        }
+    }
+    
+    // キャンペーンバナー
+    &__cam {
+        width: 320px;
+        height: 120px;
+        margin: 19px auto 0 auto;
+        background-color: base.$darkgray_color;
+    }
+    &__bar {
+        color: base.$white_color;
+        text-align: center;
+        line-height: 120px;
+    }
+
+    // メインヴィジュアル お問い合わせフォーム
+    &__inq {
+        margin-top: 31px;
+    }
+    &__imm {
+        display: flex;
+        position: relative;
+        height: 140px;
+        background-color: base.$gray_color;
+        @include base.mq(tab) {
+            width: 900px;
+            margin: 0 auto;
+        }
+    }
+    &__contactBox {
+        width: 335px;
+        margin: 0 auto;
+        @include base.mq(tab) {
+        }
+    }
+    &__immBox {
+        padding-left: 140px;
+        padding-top: 23px;
+        @include base.mq(tab) {
+            display: flex;
+            padding-left: 0px;
+            margin-left: 10px;
+        }
+    }
+    &__imgHuman {
+        position: absolute;
+        width: 137px;
+        bottom: 10px;
+        @include base.mq(tab) {
+            left: 150px;
+            bottom: 0;
+        }
+    }
+    &__imgMessage--one {
+        width: 115px;
+        @include base.mq(tab) {
+            width: 195px;
+            margin-top: 13px;
+        }
+    }
+    &__imgMessage--two {
+        margin-top: 13px;
+        width: 202px;
+        @include base.mq(tab) {
+            width: 288px;
+        }
+    }
+
+    // 問い合わせボタン
+    // メールボタン
+    &__bt {
+        position: relative;
+        bottom: 27px;
+        width: 335px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+    &btmail {
+        width: 160px;
+    }
+    &__btmail button {
+        width: 160px;
+        height: 50px;
+        border-radius: 4px;
+        box-shadow: 0px 5px base.$darkyellow_color;
+        background-color: base.$yellow_color;
+    }
+    &__btmail button:hover {
+        transform: translate3d(0, 5px, 0);
+        box-shadow: none;
+        background-color: base.$hoveryellow_color;
+    }
+    &__btmail img {
+        margin: 0 auto;
+    }
+    &__btmail p {
+        font-size: 20px;
+        color: base.$blue_color;
+        font-weight: bold;
+        margin: 17px auto 0 auto;
+        width: 100px;
+        margin-top: 17px;
+    }
+
+    // 電話ボタン
+    &__bttel {
+        width: 160px;
+    }
+    &__bttel button {
+        width: 160px;
+        height: 50px;
+        border-radius: 4px;
+        box-shadow: 0px 5px base.$darkyellow_color;
+        background-color: base.$yellow_color;
+    }
+    &__bttel button:hover {
+        transform: translate3d(0, 5px, 0);
+        box-shadow: none;
+        background-color: base.$hoveryellow_color;
+    }
+    &__bttel img {
+        margin: 0 auto;
+    }
+    &__bttel p {
+        font-size: 20px;
+        font-weight: bold;
+        color: base.$blue_color;
+        margin: 17px auto 0 auto;
+        width: 140px;
+        margin-top: 17px;
+    }
+}
+
+// 新車市場が選ばれる理由
+.sele {
+    margin-bottom: 50px;
+
+    &__imgTop {
+        background: linear-gradient(167.5deg, base.$lightblue_color 0%, base.$lightblue_color 50%, base.$blue_color 50%, base.$blue_color 100%);
+        height: 80px;
+        line-height: 80px;
+        @include base.mq(tab) {
+            background: linear-gradient(176.5deg, base.$lightblue_color 0%, base.$lightblue_color 50%, base.$blue_color 50%, base.$blue_color 100%);
+        }
+    }
+    &__imgTop img {
+        margin: 0 auto;
+        padding-top: 21px;
+    }
+    &__feat li {
+        display: flex;
+        width: 335px;
+        height: 70px;
+        margin: 20px auto 0 auto;
+        background-color: base.$yellow_color;
+        box-shadow: 0px 5px base.$darkyellow_color;
+        border-radius: 4px;
+        @include base.mq(tab) {
+            width: 550px;
+        }
+    }
+    &__feat p {
+        padding-left: 22px;
+        font-size: 20px;
+        font-weight: bold;
+        color: base.$blue_color;
+    }
+    &__one p {
+        padding-top: 10px;
+        @include base.mq(tab) {
+            padding-top: 0px;
+            line-height: 70px;
+        }
+    }
+    &__two p {
+        padding-top: 10px;
+        @include base.mq(tab) {
+            padding-top: 0px;
+            line-height: 70px;
+        }
+    }
+    &__three p {
+        line-height: 70px;
+    }
+    &__one::before {
+        content: "1";
+        font-size: 35px;
+        font-weight: bold;
+        padding-left: 17px;
+        line-height: 70px;
+        color: base.$blue_color;
+    }
+    &__two::before {
+        content: "2";
+        font-size: 35px;
+        font-weight: bold;
+        padding-left: 17px;
+        line-height: 70px;
+        color: base.$blue_color;
+    }
+    &__three::before {
+        content: "3";
+        font-size: 35px;
+        font-weight: bold;
+        padding-left: 17px;
+        line-height: 70px;
+        color: base.$blue_color;
+    }
+}
+
+// 新車市場が選ばれる理由 その2
+.seletwo {
+    // タイトル
+    &__til {
+        height: 110px;
+        background: linear-gradient(160deg, base.$lightblue_color 0%, base.$lightblue_color 50%, base.$blue_color 50%, base.$blue_color 100%);
+    }
+    &__til img {
+        width: 213px;
+        margin: 0 auto;
+        padding-top: 14.5px;
+    }
+    &__til h1 {
+        width: 335px;
+        margin: 10px auto 0 auto;
+        font-size: 23px;
+        font-weight: bold;
+        color: base.$white_color;
+        @include base.mq(tab) {
+            width: 900px;
+            margin: 20px auto 0 auto;
+            text-align: center;
+        }
+    }
+    &__redLine {
+        border-bottom: solid 5px;
+        border-color: #FF0000;
+    }
+    &__spBr {
+        display: block;
+        text-align: center;
+        @include base.mq(tab) {
+            display: inline;
+        }
+    }
+
+    // ダイハツタントの場合...
+    &__tantCase {
+        color: base.$blue_color;
+        margin-top: 24px;
+        @include base.mq(tab) {
+            position: relative;
+            left: 290px;
+            top: 120px;
+        }
+    }
+    &__tantFont {
+        padding-left: 20px;
+        font-size: 22px;
+        font-weight: bold;
+        @include base.mq(tab) {
+            font-size: 37px;
+        }
+    }
+    &__caseFont {
+        font-size: 15px;
+        font-weight: bold;
+        @include base.mq(tab) {
+            font-size: 25px;
+        }
+    }
+    &__yellowLine {
+        position: relative;
+        bottom: 15px;
+        z-index: -5;
+        background-color: base.$yellow_color;
+        width: 248px;
+        height: 15px;
+        @include base.mq(tab) {
+            width: 500px;
+            height: 25px;
+            bottom: 20px;
+            right: 100px;
+        }
+    }
+    &__carCost {
+        font-size: 13px;
+        color: base.$blue_color;
+        padding-left: 20px;
+        @include base.mq(tab) {
+            font-size: 21px;
+            font-weight: bold;
+            position: relative;
+            padding-left: 320px;
+            top: 110px;
+        }
+    }
+
+    // タントと人と背景とメッセージ
+    &__visualMessage {
+        position: relative;
+    }
+    &__tantoBox {
+    }
+    &__tantoBack {
+        position: absolute;
+        right: 0.00001px;
+        z-index: -10;
+        @include base.mq(tab) {
+            display: none;
+        }
+    }
+    &__tantoCar {
+        position: absolute;
+        width: 280px;
+        left: base.sp(100);
+        @include base.mq(tab) {
+            width: 483px;
+            left: 650px;
+            bottom: 10px;
+        }
+    }
+    &__masuyamaTanto {
+        position: relative;
+        width: 150px;
+        left: base.sp(10);
+        @include base.mq(tab) {
+            left: 120px;
+        }
+    }
+    &__tilMesse {
+        position: absolute;
+        bottom: 50px;
+        left: base.sp(110);
+        width: 230px;
+        @include base.mq(tab) {
+            width: 394px;
+            left: 200px;
+        }
+    }
+    &__starOne {
+        width: 18px;
+        position: absolute;
+        left: 100px;
+        bottom: 80px;
+        @include base.mq(tab) {
+            width: 30px;
+            left: 220px;
+            bottom: 150px;
+        }
+    }
+    &__messeCost {
+        width: 335px;
+        height: 35px;
+        margin: 0 auto;
+        background-color: base.$red_Color;
+        @include base.mq(tab) {
+            width: 1000px;
+        }
+        p {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 35px;
+            text-align: center;
+            color: base.$white_color;
+            @include base.mq(tab) {
+                text-align: left;
+                padding-left: 130px;
+            }
+        }
+    }
+    &__messeCost::before {
+        content: "";
+        position: absolute;
+        top: 249px;
+        left: 55%;
+        border: 8px solid transparent;
+        border-bottom: 15px solid base.$red_Color;
+        @include base.mq(tab) {
+            left: 350px;
+        }
+    }
+    &__grid {
+        width: 335px;
+        display: grid;
+        margin: 0 auto;
+        grid-template-rows: 65px 65px;
+        grid-template-columns: 112px 112px 112px;
+        @include base.mq(tab) {
+            width: 1000px;
+            margin: 5px auto 0 auto;
+            grid-template-rows: 97px;
+            grid-template-columns: 167px 167px 167px 167px 167px 167px;
+        }
+    }
+    &__gridLayoutA {
+        background-color: base.$yellow_color;
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+        @include base.mq(tab) {
+            grid-row: 1 / 2;
+            grid-column: 1 / 2;
+        }
+        img {
+            display: block;
+            width: 53px;
+            margin: 0 auto;
+            padding-top: 10px;
+            @include base.mq(tab) {
+                width: 80px;
+            }
+        }
+    }
+    &__gridLayoutB {
+        background-color: base.$green_color;
+        grid-row: 1 / 2;
+        grid-column: 2 / 3;
+    }
+    &__gridLayoutC {
+        background-color: #00AFC6;
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+    }
+    &__gridLayoutD {
+        background-color: base.$blue_color;
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
+        @include base.mq(tab) {
+            grid-row: 1 / 2;
+            grid-column: 4 / 5;
+        }
+    }
+    &__gridLayoutE {
+        background-color: base.$pink_color;
+        grid-row: 2 / 3;
+        grid-column: 2 / 3;
+        @include base.mq(tab) {
+            grid-row: 1 / 2;
+            grid-column: 5 / 6;
+        }
+    }
+    &__gridLayoutF {
+        background-color: base.$purple_color;
+        grid-row: 2 / 3;
+        grid-column: 3 / 4;
+        @include base.mq(tab) {
+            grid-row: 1 / 2;
+            grid-column: 6 / 7;
+        }
+    }
+    &__sevenYear {
+        width: 42px;
+        margin: 0 auto;
+        padding-top: 10px;
+        @include base.mq(tab) {
+            width: 63px;
+        }
+    }
+    &__imgMesse {
+     height: 30px;
+     margin: 0 auto;
+     padding-top: 8.2px;
+     @include base.mq(tab) {
+         height: 50px;
+     }
+    }
+
+    // サブタイトル 一般的なマイカーローンと比較すると...
+    &__subTil {
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        color: base.$white_color;
+        height: 80px;
+        margin-top: 40px;
+        background-color: base.$blue_color;
+        @include base.mq(tab) {
+            width: 900px;
+            height: 50px;
+            margin: 40px auto 0 auto;
+        }
+        h2 {
+            padding-top: 15px;
+        }
+        span {
+            display: block;
+            @include base.mq(tab) {
+                display: inline;
+            }
+        }
+    }
+
+    // グラフとグラフを繋ぐ下矢印
+    &__down {
+        width: 0;
+        height: 0;
+        margin: 10px auto 10px auto;
+        border-top: 44px solid base.$blue_color ;
+        border-left: 44px solid transparent;
+        border-right: 44px solid transparent;
+        @include base.mq(tab) {
+            position: relative;
+            border-top: 44px solid transparent;
+            border-left: 44px solid base.$blue_color;
+            border-right: 44px solid transparent;
+            border-bottom: 44px solid transparent;
+            bottom: 180px;
+            left: 15px;
+        }
+    }
+}
+
+// 一般的なマイカーローンの場合
+.comp {
+    margin-top: 20px;
+
+    &__box {
+        position: relative;
+        background-color: base.$gray_color;
+        width: 335px;
+        height: 220px;
+        margin: 0 auto;
+        h3 {
+            position: absolute;
+            left: 137px;
+            top: 13px;
+            color: base.$red_Color;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        @include base.mq(tab) {
+            margin: 0 0 0 245px;
+        }
+    }
+    &__box::before {
+        content: '';
+        position: absolute;
+        z-index: -5;
+        left: 320px;
+        bottom: 220px;
+        width: 15px;
+        height: 20px;
+        background-color: base.$gray_color;
+    }
+    &__subTil {
+        width: 365px;
+        margin: 0 auto;
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        color: base.$white_color;
+        @include base.mq(tab) {
+            margin: 0 0 0 235px;
+        }
+        h2 {
+            width: 335px;
+            height: 40px;
+            background-color: base.$blue_color;
+            line-height: 40px;
+        }
+    }
+    // &__subTil::before {
+    //     content: '';
+    //     position: absolute;
+    //     right: 340px;
+    //     top: 2205px;
+    //     width: 0;
+    //     height: 0;
+    //     border-top: 5px solid #092C52;
+    //     border-right: 5px solid #092C52;
+    //     border-left: 5px solid transparent;
+    //     border-bottom: 5px solid transparent;
+    // }
+
+    // グラフ
+    &__graph {
+        display: flex;
+        padding-left: 10px;
+    }
+    &__diff {
+        padding-top: 50px;
+    }
+    &__img {
+        display: flex;
+        margin-left: 9.5px;
+    }
+    &__squareBox {
+        width: 30px;
+        margin-right: 6px;
+        p {
+            font-size: 9px;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+    }
+    &__det {
+        font-size: 8px;
+        font-weight: bold;
+        li {
+            border-top: solid base.$black_color 1px;
+            padding: 8.5px 0 8.5px 0;
+        }
+    }
+    &__underLine {
+        border-bottom: solid base.$black_color 1px;
+    }
+    &__norgra {
+        position: relative;
+        bottom: 0;
+        width: 30px;
+        height: 60px;
+        background: linear-gradient(180deg, base.$blue_color 0%, base.$blue_color 50%, #4989CE 50%, #4989CE 100%);
+        &--shadow {
+            position: relative;
+            bottom: 0;
+            width: 30px;
+            height: 60px;
+            background: base.$gray_color;
+        }
+    }
+}
+
+// 新車市場の場合
+.newcase {
+    @include base.mq(tab) {
+        position: absolute;
+        top:2250px;
+        left: 670px;
+    }
+    // 見出し
+    &__til {
+        width: 365px;
+        margin: 0 auto;
+        font-size: 22px;
+        font-weight: bold;
+        text-align: center;
+        color: base.$blue_color;
+    }
+    &__tilMessage {
+        width: 250px;
+        height: 40px;
+        background-color: base.$yellow_color;
+        line-height: 40px;
+        @include base.mq(tab) {
+            position: relative;
+            top: 20px;
+            z-index: 5;
+        }
+    }
+
+    // 矢印
+    &__arrow {
+        position: relative;
+        top: 45px;
+        left: 80px;
+        width: 240px;
+        height: 10px;
+        background-color: base.$red_Color;
+        @include base.mq(tab) {
+            top: 107px;
+        }
+        &::before {
+            content: '';
+            position: relative;
+            right: 10px;
+            bottom: 10px;
+            display: block;
+            width: 20px;
+            height: 20px;
+            margin: 0 0  0 240px;
+            background-color: base.$red_Color;
+            clip-path: polygon(0 0, 0 100%, 100% 100%);
+        }
+    }
+
+    // グラフゾーン
+    &__box {
+        position: relative;
+        width: 335px;
+        height: 140px;
+        margin: 0 auto;
+        background-color: base.$gray_color;
+        @include base.mq(tab) {
+            height: 240px;
+        }
+        h3 {
+            position: absolute;
+            left: 137px;
+            top: 21px;
+            color: base.$red_Color;
+            font-size: 20px;
+            font-weight: bold;
+            @include base.mq(tab) {
+                top: 40px;
+            }
+        }
+    }
+    &__box::before {
+        content: '';
+        position: absolute;
+        z-index: -5;
+        left: 235px;
+        bottom: 140px;
+        width: 100px;
+        height: 20px;
+        background-color: base.$gray_color;
+    }
+    &__img {
+        display: flex;
+        position: relative;
+        margin-left: 9.5px;
+    }
+    &__graph {
+        display: flex;
+        padding-left: 10px;
+        @include base.mq(tab) {
+            position: relative;
+            top: 80px;
+        }
+    }
+    &__diff {
+        padding-top: 50px;
+    }
+    &__det {
+        width: 59.7px;
+        font-size: 8px;
+        font-weight: bold;
+        li {
+            border-top: solid base.$black_color 1px;
+            padding: 15px 0 15px 0;
+        }
+    }
+    &__squareBox {
+        width: 30px;
+        margin-right: 6px;
+        p {
+            font-size: 9px;
+            font-weight: bold;
+            margin: 0 auto;
+        }
+    }
+    &__norgra {
+        width: 30px;
+        height: 45px;
+        background: #4989CE;
+    }
+    &__underLine {
+        border-bottom: solid base.$black_color 1px;
+    }
+}
+
+.proce {
+    margin: 55px 0 15px 0;
+    @include base.mq(tab) {
+        position: relative;
+        margin: 0 0 15px 0;
+        left: -230px;
+    }
+
+    &__til {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 335px;
+        height: 40px;
+        margin: 0 auto;
+        line-height: 40px;
+        background-color: base.$blue_color;
+        color: base.$white_color;
+    }
+
+    // table header
+    &__subtil {
+        display: flex;
+        justify-content: space-between;
+        width: 335px;
+        margin: 5px auto 5px auto;
+    }
+    &__blank {
+        width: 75px;
+        height: 40px;
+        background-color: base.$cyan_color;
+    }
+    &__yellow {
+        font-size: 22px;
+        font-weight: bold;
+        width: 125px;
+        height: 40px;
+        line-height: 40px;
+        background-color: base.$yellow_color;
+        color: base.$blue_color;
+        text-align: center;
+    }
+    &__blue {
+        width: 125px;
+        height: 40px;
+        padding-top: 3px;
+        background-color: base.$cyan_color;
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        & p {
+            color: base.$white_color;
+        }
+        & span {
+            display: block;
+        }
+    }
+
+    // table data
+    &__td {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 335px;
+        margin: 0 auto;
+        & img {
+            position: absolute;
+            left: 185px;
+            bottom: 25px;
+        }
+    }
+}
+
+// table data
+.verone {
+    // その1
+    &__blue {
+        width: 75px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: base.$white_color;
+        background-color: base.$blue_color;
+        &--A {
+            width: 75px;
+            height: 40px;
+            padding-top: 5px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: base.$white_color;
+            background-color: base.$blue_color;
+        }
+    }
+    &__yellow {
+        font-size: 22px;
+        font-weight: bold;
+        width: 125px;
+        height: 40px;
+        line-height: 40px;
+        background-color: base.$yellow_color;
+        color: base.$red_Color;
+        text-align: center;
+    }
+    &__sky {
+        width: 125px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #DFEBF7;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        & p {
+            color: base.$black_color;
+        }
+    }
+
+    // その2
+    &__thinblue--A {
+        width: 75px;
+        height: 40px;
+        padding-top: 5px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: base.$white_color;
+        background-color: base.$cyan_color;
+    }
+
+    &__thinyellow {
+        font-size: 22px;
+        font-weight: bold;
+        width: 125px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #FFF39B;
+        color: base.$red_Color;
+        text-align: center;
+    }
+
+    &__aqua {
+        width: 125px;
+        height: 40px;
+        line-height: 40px;
+        background-color: #F0F7FD;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        & p {
+            color: base.$black_color;
+        }
+    }
+}
+
+.sevenYear {
+    &__text {
+        font-size: 10px;
+        display: block;
+    }
+}
+
+.span__Text{
+    color: base.$yellow_color;
+}
+
+.eyeCatch {
+    position: relative;
+    width: 335px;
+    height: 85px;
+    margin: 5px auto 0 auto;
+    background-color: base.$yellow_color;
+
+    &__big {
+        &--A {
+            position: absolute;
+            left: 30px;
+            top: 10px;
+        }
+        &--B {
+            position: absolute;
+            left: 300px;
+            top: 20px;
+            
+        }
+        &--C {
+            position: absolute;
+            left: 30px;
+            top: 50px;
+        }
+    }
+    &__small {
+        &--A {
+            position: absolute;
+            left: 25px;
+            top: 25px;
+        }
+        &--B {
+            position: absolute;
+            left: 295px;
+            top: 15px;
+        }
+        &--C {
+            position: absolute;
+            left: 45px;
+            top: 65px;
+        }
+    }
+    &__center {
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    &__vert {
+        display: inline;
+        font-size: 16px;
+        font-weight: bold;
+        writing-mode: vertical-rl;
+        color: base.$red_Color;
+    }
+
+    &__bigFont {
+        display: inline;
+        font-size: 40px;
+        font-weight: bold;
+        color: base.$red_Color;
+        text-decoration: underline;
+        &--vert {
+            display: inline;
+            writing-mode: vertical-rl;
+            font-size: 16px;
+        }
+    }
+
+    &__attention {
+        display: block;
+        width: 335px;
+        margin: 2px auto 0 auto;
+        font-size: 10px;
+        color: #848484;
+        font-weight: bold;
+    }
+}
+
+.conect {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    @include base.mq(tab) {
+        display: none;
+    }
+}
+
+.sobig {
+    @include base.mq(tab) {
+        position: absolute;
+        top: 2639px;
+        left: 680px;
+    }
+    &__til {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        width: 335px;
+        height: 40px;
+        line-height: 40px;
+        background-color: base.$blue_color;
+        color: base.$white_color;
+        margin: 0 auto;
+    }
+
+    &__td {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        width: 335px;
+        margin: 0 auto;
+        & img {
+            position: absolute;
+            left: 185px;
+            bottom: 65px;
+        }
+    }
+    
+    // ここOK
+    &__subtil {
+        display: flex;
+        justify-content: space-between;
+        width: 335px;
+        margin: 5px auto 5px auto;
+    }
+    &__blank {
+        width: 75px;
+        height: 40px;
+        background-color: base.$cyan_color;
+    }
+    &__yellow {
+        font-size: 16px;
+        font-weight: bold;
+        width: 125px;
+        height: 40px;
+        line-height: 40px;
+        background-color: base.$yellow_color;
+        color: base.$blue_color;
+        text-align: center;
+    }
+    &__blue {
+        width: 125px;
+        height: 40px;
+        line-height: 40px;
+        background-color: base.$cyan_color;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        & p {
+            color: base.$white_color;
+        }
+    }
+    // ここOK
+
+    // ここOK
+    &__thinblue {
+        width: 75px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        color: base.$white_color;
+        background-color: base.$cyan_color;
+    }
+
+    &__thinyellow {
+        font-size: 10px;
+        font-weight: bold;
+        width: 125px;
+        height: 80px;
+        padding-top: 10px;
+        background-color: #FFF39B;
+        color: base.$red_Color;
+        text-align: center;
+    }
+
+    &__aqua {
+        width: 125px;
+        height: 80px;
+        padding-top: 10px;
+        background-color: #F0F7FD;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        & p {
+            color: base.$black_color;
+        }
+    }
+    // ここOK
+
+    &__blueOK {
+        width: 75px;
+        height: 80px;
+        line-height: 80px;
+        text-align: center;
+        font-size: 12px;
+        font-weight: bold;
+        color: base.$white_color;
+        background-color: base.$blue_color;
+    }
+
+    &__yellowOK {
+        font-size: 10px;
+        font-weight: bold;
+        width: 125px;
+        height: 80px;
+        padding-top: 10px;
+        background-color: base.$yellow_color;
+        color: base.$red_Color;
+        text-align: center;
+    }
+
+    &__skyOK {
+        width: 125px;
+        height: 80px;
+        padding-top: 10px;
+        background-color: #DFEBF7;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        & p {
+            color: base.$black_color;
+        }
+    }
+}
+
+.ver {
+    &__circle {
+        font-size: 30px;
+    }
+    &__subtle {
+        font-size: 30px;
+    }
+}
+
+// 新車市場はこんな人にオススメ！
+.reco {
+    margin: 43px 0 76px 0;
+
+    &__til {
+        width: 335px;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        margin: 0 auto;
+        background-color: base.$blue_color;
+        color: base.$white_color;
+        font-size: 20px;
+        font-weight: bold;
+        @include base.mq(tab) {
+            width: 900px;
+        }
+        & span {
+            color: base.$yellow_color;
+        }
+    }
+    &__merit {
+        display: flex;
+        width: 335px;
+        margin: 10px auto 27px auto;
+        justify-content: space-between;
+        @include base.mq(tab) {
+            width: 700px;
+        }
+    }
+    // ボタンの実装
+    &__planBox {
+        width: 255px;
+        height: 55px;
+        margin:  0 auto;
+        text-align: center;
+        line-height: 55px;
+        border-radius: 4px;
+        box-shadow: 0px 5px base.$darkyellow_color;
+        background-color: base.$yellow_color;
+    }
+    &__planBtn {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        color: base.$blue_color;
+        &::before {
+            content: '▶︎';
+            position: relative;
+            right: 60px;
+        }
+    }
+    &__planBox:hover {
+        transform: translate3d(0, 5px, 0);
+        box-shadow: none;
+        background-color: base.$hoveryellow_color;
+    }
+}
+
+// 3つのメリット（画像と文章）
+ .merit {
+    &__img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        @include base.mq(tab) {
+            width: 200px;
+            height: 200px;
+            & img {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+
+    // 各種メッセージボックス
+    &__green, &__pink, &__vio {
+        position: relative;
+    }
+
+    &__greenBox {
+        position: absolute;
+        bottom: 60px;
+        width: 110px;
+        height: 37px;
+        padding-top: 5px;
+        background-color: base.$green_color;
+        font-size: 12px;
+        color: base.$white_color;
+        text-align: center;
+        @include base.mq(tab) {
+            font-size: 19px;
+            font-weight: bold;
+            width: 192px;
+            height: 64px;
+            bottom: 110px;
+            line-height: 30px;
+        }
+    }
+    &__pinkBox {
+        position: absolute;
+        bottom: 60px;
+        width: 110px;
+        height: 37px;
+        padding-top: 5px;
+        background-color: base.$pink_color;
+        font-size: 12px;
+        color: base.$white_color;
+        text-align: center;
+        @include base.mq(tab) {
+            font-size: 19px;
+            font-weight: bold;
+            width: 192px;
+            height: 64px;
+            bottom: 110px;
+            line-height: 30px;
+        }
+    }
+    &__vioBox {
+        position: absolute;
+        bottom: 60px;
+        width: 110px;
+        height: 37px;
+        padding-top: 5px;
+        background-color: base.$purple_color;
+        font-size: 12px;
+        color: base.$white_color;
+        text-align: center;
+        @include base.mq(tab) {
+            font-size: 19px;
+            font-weight: bold;
+            width: 192px;
+            height: 64px;
+            bottom: 110px;
+            line-height: 59px;
+        }
+    }
+
+    // 矢印マーク
+    &__arrow {
+        position: relative;
+        top: 12px;
+        width: 30px;
+        height: 30px;
+        margin: 0px auto 0 auto;
+        background-color: base.$red_Color;
+        clip-path: polygon(50% 50%, 0 0, 100% 0);
+        @include base.mq(tab) {
+            width: 60px;
+            height: 60px;
+            top: 20px;
+        }
+    }
+
+    // 矢印後のメッセージ
+    &__set {
+        width: 110px;
+        color: base.$red_Color;
+        font-size: 16px;
+        font-weight: bold;
+        text-align: center;
+        @include base.mq(tab) {
+            width: 200px;
+            font-size: 26px;
+        }
+    }
+ } 
+
+  .selethree {
+    // タイトル
+    &__til {
+        height: 130px;
+        background: linear-gradient(160deg, base.$lightblue_color 0%, base.$lightblue_color 50%, base.$blue_color 50%, base.$blue_color 100%);
+        @include base.mq(tab) {
+            height: 110px;
+        }
+    }
+    &__til img {
+        width: 213px;
+        margin: 0 auto;
+        padding-top: 14.5px;
+    }
+    &__til h1 {
+        width: 335px;
+        margin: 10px auto 0 auto;
+        font-size: 23px;
+        font-weight: bold;
+        text-align: center;
+        color: base.$white_color;
+        @include base.mq(tab) {
+            margin: 20px auto 0 auto;
+            width: 900px;
+        }
+    }
+    &__redLine {
+        border-bottom: solid 5px;
+        border-color: #FF0000;
+    }
+    &__spBr {
+        display: block;
+        text-align: center;
+        @include base.mq(tab) {
+            display: inline;
+        }
+    }
+
+    // サブタイトル
+    &__messe {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        margin: 13px 0 57px 0;
+    }
+  }
+
+//   月々コミコミ¥8,800~(税込)
+.suzukione {
+
+    &__mon {
+        position: relative;
+    }
+
+    // トピックス
+    &__sec {
+        margin: 10px 0 65px 0;  
+        @include base.mq(tab) {
+            width: 1000px;
+            margin: 10px auto 65px auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    &__car {
+        width: 335px;
+        height: 130px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: base.$blue_color;
+        @include base.mq(tab) {
+            width: 210px;
+            height: 300px;
+        }
+        &--mr {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__tps {
+        display: flex;
+        width: 310px;
+        padding-top: 5px;
+        padding-left: 5px;
+        @include base.mq(tab) {
+            display: block;
+        }
+        & img {
+            display: block;
+            width: 145px;
+            @include base.mq(tab) {
+                width: 188px;
+            }
+        }
+    }
+    &__carBox {
+        width: 155px;
+        height: 120px;
+        padding: 10px 10px 0 10px;
+        background-color: base.$white_color;
+        @include base.mq(tab) {
+            width: 200px;
+            height: 155px;
+        }
+    }
+}
+
+.mon {
+    &__back {
+        width: base.sp(375);
+        @include base.mq(tab) {
+            width: 900px;
+            margin: 0 auto;
+        }
+        & img {
+            width: 100%;
+        }
+    }
+    &__subtil {
+        position: relative;
+    }
+    &__tilMesse {
+        position: absolute;
+        bottom: 10px;
+        left: 39px;
+        @include base.mq(tab) {
+            left: 492px;
+        }
+        &--A {
+            position: absolute;
+            bottom: 10px;
+            left: 29px;
+            @include base.mq(tab) {
+                left: 492px;
+            }
+        }
+        &--B {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            @include base.mq(tab) {
+                left: 492px;
+            }
+        }
+    }
+    &__tilStar {
+        position: absolute;
+        left: 330px;
+        bottom: 60px;
+        @include base.mq(tab) {
+            left: 760px;
+        }
+    }
+}
+
+.tps {
+    &__det {
+        @include base.mq(tab) {
+            width: 200px;
+            margin-top: 10px;
+        }
+        & h5 {
+            font-size: 12px;
+            font-weight: bold;
+            color: base.$white_color;
+        }
+        & h3 {
+            font-size: 16px;
+            font-weight: bold;
+            color: base.$white_color;
+        }
+    }
+
+    &__price {
+        width: 130px;
+        display: flex;
+        color: base.$yellow_color;
+        margin: 0 auto;
+        & h6 {
+            font-size: 10px;
+            & span {
+                display: block;
+            }
+        }
+        & p {
+            font-size: 24px;
+            font-weight: bold;
+            & span {
+                font-size: 16px;
+            }
+        }
+    }
+
+    // ボタンの実装
+    &__planBox {
+        width: 165px;
+        height: 35px;
+        margin: 10px 0 0 5px;
+        line-height: 30px;
+        border-radius: 4px;
+        box-shadow: 0px 5px base.$darkyellow_color;
+        background-color: base.$yellow_color;
+        @include base.mq(tab) {
+            width: 100%;
+            margin: 10px 0 0 0;
+        }
+    }
+    &__planBtn {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        color: base.$blue_color;
+        &::before {
+            content: '▶︎';
+            position: relative;
+            right: 20px;
+        }
+    }
+    &__planBox:hover {
+        transform: translate3d(0, 5px, 0);
+        box-shadow: none;
+        background-color: base.$hoveryellow_color;
+    }
+}
+
+// 新車市場が選ばれる理由 充実のアフターサービス！
+.seleafter {
+
+    // タイトル
+    &__til {
+        height: 90px;
+        background: linear-gradient(166deg, base.$lightblue_color 0%, base.$lightblue_color 50%, base.$blue_color 50%, base.$blue_color 100%);
+    }
+    &__til img {
+        width: 213px;
+        margin: 0 auto;
+        padding-top: 14.5px;
+    }
+    &__til h1 {
+        width: 335px;
+        margin: 10px auto 0 auto;
+        font-size: 23px;
+        font-weight: bold;
+        text-align: center;
+        color: base.$white_color;
+    }
+    &__redLine {
+        border-bottom: solid 5px;
+        border-color: #FF0000;
+    }
+
+    // サブタイトル
+    &__sub {
+        font-size: 26px;
+        font-weight: bold;
+        width: 310px;
+        line-height: 50px;
+        text-align: center;
+        margin: 25px auto 18px auto;
+        @include base.mq(tab) {
+            width: 494px;
+        }
+        & span {
+            color: base.$red_Color;
+            border-bottom: solid 5px;
+            border-color: #FF0000;
+        }
+    }
+
+    // サービスについて
+    &__mentePicture {
+        width: 335px;
+        margin: 0 auto;
+    }   
+
+    // 新車市場にお任せください！
+    &__ent {
+        width: 335px;
+        margin: 10px auto 36px auto;
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        color: base.$red_Color;
+        @include base.mq(tab) {
+            width: 400px;
+            font-size: 30px;
+        }
+    }
+    &__so {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+    }
+    &__makerWa {
+        height: 40px;
+        line-height: 40px;
+        background-color: base.$yellow_color;
+        font-size: 28px;
+        font-weight: bold;
+        color: base.$blue_color;
+        text-align: center;
+    }
+
+    &__mainte {
+        @include base.mq(tab) {
+            width: 580px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+}
+
+// メンテナンスについて
+.mainte {
+    &__cont {
+        display: flex;
+        width: 335px;
+        margin: 0 auto;
+        @include base.mq(tab) {
+            display: block;
+            margin-right: 5px;
+        }
+    }
+    &__blue {
+        display: flex;
+        width: 167px;
+        height: 45px;
+        background-color: #00AFC6;
+        @include base.mq(tab) {
+            width: 245px;
+            height: 95px;
+            padding-top: 20px;
+            margin-bottom: 5px;
+        }
+    }
+    &__green {
+        display: flex;
+        width: 167px;
+        height: 45px;
+        background-color: base.$green_color;
+        @include base.mq(tab) {
+            width: 245px;
+            height: 95px;
+            padding-top: 20px;
+        }
+    }
+    &__sevenYearBlue {
+        position: relative;
+        top: 15px;
+        left: 30px;
+        width: 42px;
+        height: 13px;
+        @include base.mq(tab) {
+            width: 83px;
+            height: 26px;
+        }
+    }
+    &__sevenYearGreen {
+        position: relative;
+        top: 15px;
+        left: 20px;
+        width: 42px;
+        height: 13px;
+        @include base.mq(tab) {
+            width: 83px;
+            height: 26px;
+        }
+    }
+    &__syaken {
+        position: relative;
+        top: 10px;
+        left: 45px;
+        width: 43px;
+        height: 23px;
+        @include base.mq(tab) {
+            width: 86px;
+            height: 37px;
+        }
+    }
+    &__oil {
+        position: relative;
+        top: 10px;
+        left: 25px;
+        width: 80px;
+        height: 23px;
+        @include base.mq(tab) {
+            width: 135px;
+            height: 39px;
+        }
+    }
+}
+
+// メーカー保証の下記部分
+.guara {
+    &__year {
+        position: relative;
+        height: 125px;
+    }
+    &__doumae {
+        position: absolute;
+        z-index: -5;
+        width: 118px;
+        @include base.mq(tab) {
+            width: 178px;
+            left: -150px;
+        }
+    }
+    &__fiveYear {
+        position: absolute;
+        width: 180px;
+        height: 105px;
+        top: 11px;
+        left: 97px;
+        @include base.mq(tab) {
+            width: 308px;
+            height: 178px;
+            left: 0px;
+        }
+    }
+    &__masuyama {
+        position: absolute;
+        z-index: -5;
+        width: 118px;
+        left: 252px;
+        @include base.mq(tab) {
+            width: 200px;
+            left: 300px;
+        }
+    }
+    &__det {
+        height: 85px;
+        background-color: base.$yellow_color;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: base.$blue_color;
+        @include base.mq(tab) {
+            height: 55px;
+            line-height: 55px;
+        }
+        & p {
+            padding-top: 10px;
+            @include base.mq(tab) {
+                display: inline;
+            }
+        }
+        & span {
+            font-size: 30px;
+        }
+    }
+}
+
+.seleafter {
+    &__guara {
+        @include base.mq(tab) {
+            width: 700px;
+            margin: 0 auto;
+        }
+    }
+    // 全車につきます！！
+    &__amp {
+        height: 40px;
+        line-height: 40px;
+        color: base.$white_color;
+        background-color: base.$blue_color;
+        text-align: center;
+        font-size: 24px;
+        font-weight: bold;
+        @include base.mq(tab) {
+            margin-top: 70px;
+        }
+    }
+
+    &__ser {
+        width: 335px;
+        height: 1040px;
+        background-color: base.$blue_color;
+        margin: 50px auto 85px auto;
+        & h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: base.$white_color;
+        }
+        & span {
+            color: base.$yellow_color;
+        }
+    }
+
+    &__nextRow {
+        display: block;
+        @include base.mq(tab) {
+            display: inline;
+        }
+    }
+
+    &__subTil {
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: base.$white_color;
+        padding-top: 18px;
+        margin-bottom: 18px;
+    }
+
+    &__ser {
+        @include base.mq(tab) {
+            width: 700px;
+            height: 570px;
+        }
+    }
+}
+
+.ser {
+    &__feat {
+        text-align: center;
+        @include base.mq(tab) {
+            width: 650px;
+            margin: 40px auto 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    }
+}
+
+.feat {
+    &__tps {
+        & img {
+            margin:  0 auto;
+        }
+        & h3 {
+            margin-top: 16px;
+            padding-bottom: 34px;
+        }
+    }
+}
+
+// 納車式/お客様の声
+ .delivery {    
+    & h3 {
+        width: 335px;
+        height: 40px;
+        line-height: 40px;
+        margin: 0 auto 10px auto;
+        text-align: center;
+        font-size: 20px;
+        font-weight: bold;
+        color: base.$white_color;
+        background-color: base.$blue_color;
+        @include base.mq(tab) {
+            width: 830px;
+            position: relative;
+            right: 65px;
+        }
+    }
+
+    &__img {
+        width: 335px;
+        margin: 0 auto 20px auto;
+        display: grid;
+        grid-template-rows: 107px 107px 107px;
+        grid-template-columns: 105px 105px 105px;
+        grid-gap: 9px 9px;
+        @include base.mq(tab) {
+            position: relative;
+            right: 246px;
+            grid-template-rows: 200px 200px;
+            grid-template-columns: 200px 200px 200px 200px;
+        }
+
+        & img {
+            width: 107px;
+            height: 105px;
+            @include base.mq(tab) {
+                width: 200px;
+                height: 200px;
+            }
+        }
+    }
+
+    &__item--res {
+        @include base.mq(tab) {
+            display: none;
+        }
+    }
+ }
+
+ .buyflow {
+    margin-top: 90px;
+    margin-bottom: 72px;
+
+    &__til {
+        height: 70px;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 70px;
+        color: base.$white_color;
+        background: linear-gradient(169deg, base.$lightblue_color 0%, base.$lightblue_color 50%, base.$blue_color 50%, base.$blue_color 100%);
+    }
+
+    &__proce {
+        margin-top: 30px;
+        @include base.mq(tab) {
+            margin-top: 50px;
+        }
+    }
+
+    &__box {
+        & h2 {
+            position: relative;
+            width: 335px;
+            height: 45px;
+            margin: 0 auto;
+            line-height: 45px;
+            color: base.$white_color;
+            font-size: 25px;
+            font-weight: bold;
+            background-color: base.$blue_color;
+            text-align: center;
+            @include base.mq(tab) {
+                width: 600px;
+            }
+        }
+    }
+
+    &__numberOne {
+        &::before {
+            content: '1';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            color: base.$blue_color;
+            background-color: base.$yellow_color;
+        }
+    }
+    &__numberTwo {
+        &::before {
+            content: '2';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            color: base.$blue_color;
+            background-color: base.$yellow_color;
+        }  
+    }
+    &__numberThree {
+        &::before {
+            content: '3';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            color: base.$blue_color;
+            background-color: base.$yellow_color;
+        }   
+    }
+
+    &__text {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+        line-height: 25px;
+        margin-top: 18px;
+    }
+
+    &__arrow {
+        width: 0px;
+        height: 0px;
+        margin: 12px auto 20px auto ;
+        border-top: 30px solid base.$red_Color;
+        border-left: 30px solid transparent;
+        border-right: 30px solid transparent;
+    }
+
+    &__pRes {
+        @include base.mq(tab) {
+            display: inline;
+        }
+    }
+ }
+
+ .que {
+    &__til {
+        height: 70px;
+        font-size: 25px;
+        font-weight: bold;
+        text-align: center;
+        line-height: 70px;
+        color: base.$white_color;
+        background: linear-gradient(169deg, base.$lightblue_color 0%, base.$lightblue_color 50%, base.$blue_color 50%, base.$blue_color 100%);
+    }
+
+    &__box {
+        width: 335px;
+        margin: 50px auto 63px auto;
+        @include base.mq(tab) {
+            width: 900px;
+        }
+    }
+
+    &__q {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        @include base.mq(tab) {
+            justify-content: left;
+        }
+        & p {
+            width: 270px;
+            font-size: 18px;
+            font-weight: bold;
+            color: base.$lightblue_color;
+            @include base.mq(tab) {
+                width: 413px;
+                margin-left: 20px;
+                margin-top: 15px;
+            }
+        }
+    }
+
+    &__a {
+        display: flex;
+        justify-content: space-between;
+        @include base.mq(tab) {
+            justify-content: left;
+        }
+        & img {
+            width: auto;
+            height: 41px;
+        }
+        & p {
+            width: 270px;
+            font-size: 14px;
+            font-weight: bold;
+            @include base.mq(tab) {
+                width: 844px;
+                margin-left: 20px;
+                margin-top: 15px;
+            }
+        }
+        & span {
+            color: base.$red_Color;
+        }
+    }
+
+    &__p {
+        position: relative;
+        top: 20px;
+        @include base.mq(tab) {
+            top: 0;
+        }
+    }
+
+    //  お問い合わせフォーム（Q&Aver）
+    &__immBox {
+        padding-top: 21px;
+    }
+
+    &__bt {
+        position: relative;
+        bottom: 25px;
+        & :hover {
+            transform: translate3d(0, 5px, 0);
+            box-shadow: none;
+            background-color: base.$hoveryellow_color;
+        }
+    }
+
+    &__bttel {
+        width: 295px;
+        height: 50px;
+        margin: 0 auto;
+        background-color: base.$yellow_color;
+        border-radius: 4px;
+        box-shadow: 0px 5px base.$darkyellow_color;
+        & p {
+            font-size: 18px;
+            font-weight: bold;
+            color: base.$blue_color;
+            line-height: 50px;
+            padding-left: 20px;
+        }
+        & img {
+            width: 23px;
+            height: 23px;
+            position: relative;
+            left:10px;
+            top: 12.5px;
+        }
+        & button {
+            display: flex;
+        }
+    }
+ }
+
+ .form {
+    width: 335px;
+    margin: 0 auto 74px auto;
+    @include base.mq(tab) {
+        width: 700px;
+    }
+
+    // お問い合わせフォーム タイトルと詳細
+    &__til {
+        font-size: 35px;
+        font-weight: bold;
+        color: base.$blue_color;
+        text-align: center;
+        margin-top: 34px;
+        margin-bottom: 33px;
+    }
+
+    &__subTil {
+        width: 335px;
+        margin: 0 auto 39px auto;
+        font-size: 14px;
+        font-weight: bold; 
+        line-height: 25px;
+        @include base.mq(tab) {
+            width: 695px;
+            text-align: center;
+        }
+        &__spanOne {   
+            @include base.mq(tab) {
+                display: block;
+            }
+        }
+        &__spanTwo {
+            display: block;
+            color: base.$red_Color;
+        }
+    }
+
+    // お問い合わせフォーム 入力欄
+    &__name {
+        margin-bottom: 31px;
+
+        & label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 6px;
+            &::after {
+                content: '必須';
+                position: relative;
+                left: 9px;
+                bottom: 3px;
+                display: inline-block;
+                width: 40px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 12px;
+                background-color: base.$yellow_color;
+                color: base.$blue_color;
+            }
+        }
+        & input {
+            padding-left: 10px;
+            margin-top: 6px;
+            width: 335px;
+            height: 50px;
+            border: solid base.$blue_color;
+            border-radius: 6px;
+            @include base.mq(tab) {
+                width: 700px;
+            }
+        }
+    }
+
+    &__tel {
+        margin-bottom: 31px;
+
+        & label {
+            font-size: 16px;
+            font-weight: bold;
+            &::after {
+                content: '必須';
+                position: relative;
+                left: 9px;
+                bottom: 3px;
+                display: inline-block;
+                width: 40px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 12px;
+                background-color: base.$yellow_color;
+                color: base.$blue_color;
+            }
+        }
+        & input {
+            padding-left: 10px;
+            margin-top: 6px;
+            width: 335px;
+            height: 50px;
+            border: solid base.$blue_color;
+            border-radius: 6px;
+            @include base.mq(tab) {
+                width: 700px;
+            }
+        }
+    }
+
+    &__mail {
+        margin-bottom: 31px;
+
+        & label {
+            font-size: 16px;
+            font-weight: bold;
+            &::after {
+                content: '必須';
+                position: relative;
+                left: 9px;
+                bottom: 3px;
+                display: inline-block;
+                width: 40px;
+                height: 20px;
+                text-align: center;
+                line-height: 20px;
+                font-size: 12px;
+                background-color: base.$yellow_color;
+                color: base.$blue_color;
+            }
+        }
+        & input {
+            padding-left: 10px;
+            margin-top: 6px;
+            width: 335px;
+            height: 50px;
+            border: solid base.$blue_color;
+            border-radius: 6px;
+            @include base.mq(tab) {
+                width: 700px;
+            }
+        }  
+    }
+
+    &__loan {
+        margin-bottom: 28px;
+        
+        & h3 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 6px;
+        }
+        & input {
+            width: 35px;
+            height: 35px;
+            border-radius: 6px;
+            border: 1.5px base.$blue_color solid;
+        }
+        & label {
+            font-size: 16px;
+            font-weight: bold;
+            padding-left: 9px;
+        }
+    }
+
+    &__car {
+        margin-bottom: 28px;
+
+        & label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        & input {
+            padding-left: 10px;
+            margin-top: 6px;
+            width: 335px;
+            height: 50px;
+            border: solid base.$blue_color;
+            border-radius: 6px;
+            @include base.mq(tab) {
+                width: 700px;
+            }
+        }  
+    }
+
+    &__contact {
+        margin-bottom: 28px;
+
+        & label {
+            font-size: 16px;
+            font-weight: bold;
+        }
+        & textarea {
+            width: 335px;
+            height: 150px;
+            border-radius: 6px;
+            border: 1.5px base.$blue_color solid;
+            padding-top: 17px;
+            padding-left: 10px;
+            @include base.mq(tab) {
+                width: 700px;
+            }
+        }
+    }
+
+    &__policy {
+        margin-bottom: 28px;
+        
+        & input {
+            width: 35px;
+            height: 35px;
+            border-radius: 6px;
+            border: 1.5px base.$blue_color solid;
+        }
+        & label {
+            display: inline;
+            font-size: 16px;
+            font-weight: bold;
+            padding-left: 9px;
+
+        }
+        & img {
+            display: inline;
+            padding-bottom: 18px;
+        }
+        & a {
+            text-decoration: underline;
+            color: base.$blue_color;
+        }
+    }
+
+    // ボタンの実装
+    &__planBox {
+        width: 255px;
+        height: 55px;
+        margin:  0 auto;
+        text-align: center;
+        line-height: 55px;  
+        border-radius: 4px;
+        box-shadow: 0px 5px base.$darkyellow_color;
+        background-color: base.$yellow_color;
+    }
+    &__planBtn {
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        color: base.$blue_color;
+        &::before {
+            content: '▶︎';
+            position: relative;
+            right: 30px;
+        }
+    }
+    &__planBox:hover {
+        transform: translate3d(0, 5px, 0);
+        box-shadow: none;
+        background-color: base.$hoveryellow_color;
+    }
+
+    // 注意文章
+    &__attention {
+        margin-top: 45px;
+
+        & p {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 23px;
+            @include base.mq(tab) {
+                text-align: center;
+            }
+        }
+        &--sent {
+            color: base.$red_Color
+        }
+        &--newLine {
+            display: block;
+        }
+    }
+ }
+
+ .store {
+    background-color: base.$blue_color ;
+    color: base.$white_color;
+
+    &__info {
+        @include base.mq(tab) {
+            width: 790px;
+            margin: 0 auto;
+            padding-bottom: 125px;
+            display: flex;
+        }
+    }
+
+    &__til {
+        padding-top: 37px;
+        margin-bottom: 56px;
+        font-size: 35px;
+        font-weight: bold;
+        text-align: center;
+    }
+    &__jump {
+        width: 335px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        & h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        & a {
+            font-size: 14px;
+        }
+    }
+
+    &__line {
+        width: 335px;
+        height: 1px;
+        margin: 17px auto 15px auto ;
+        background-color: base.$white_color;
+    }
+
+    // 店舗詳細
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        width: 335px;
+        margin: 0 auto;
+    }
+    &__item {
+        text-align: left;
+        font-size: 14px;
+        font-weight: bold;
+        margin-bottom: 14px;
+
+        &--last {
+            text-align: left;
+            font-size: 14px;
+            font-weight: bold;
+            padding-bottom: 30px;
+        }
+    }
+    &__pd {
+        padding-bottom: 63px;
+        // @include base.mq(tab) {
+        //     padding-bottom: 125px;
+        // }
+    }
+
+    // MAPで見るボタン PC版display:none用
+    &__btnPc {
+        @include base.mq(tab) {
+            display: none;
+        }
+    }
+  }
+
+ .connne {
+    &__backYellowPc {
+        background-color: base.$yellow_color;
+    }
+
+    padding-bottom: 20px;
+    background-color: base.$yellow_color;
+    @include base.mq(tab) {
+        display: flex;
+        width: 900px;
+        margin: 0 auto;
+    }
+
+    & h2 {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        color: base.$blue_color;
+        padding-top: 17px;
+        @include base.mq(tab) {
+            line-height: 50px;
+        }
+    }
+    &__list {
+        display: grid;
+        grid-template-rows: 55px 55px;
+        grid-template-columns: 100px 100px 100px;
+        column-gap: 17.5px;
+        row-gap: 15px;
+        width: 335px;
+        margin: 18px auto 0 auto;
+        @include base.mq(tab) {
+            width: 600px;
+            grid-template-rows: 55px;
+            grid-template-columns: 100px 100px 100px 100px 100px 100px;
+        }
+    }
+    &__item {
+        width: 100px;
+        height: 55px;
+        background-color: base.$white_color;
+
+        & img {
+            width: 72px;
+        }
+    }
+    &__itemBox {
+        &--A {
+            width: 72px;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+        &--B {
+            width: 72px;
+            margin: 0 auto;
+            padding-top: 10px;
+            
+        }
+        &--C {
+            width: 72px;
+            margin: 0 auto;
+            padding-top: 15px;
+        }
+        &--D {
+            width: 72px;
+            margin: 0 auto;
+            padding-top: 18px;
+            
+        }
+        &--E {
+            width: 72px;
+            margin: 0 auto;
+            padding-top: 15px;
+            
+        }
+        &--F {
+            width: 72px;
+            margin: 0 auto;
+            padding-top: 18px;
+        }
+    }
+ }
+
+ .googleMap {
+    width: 335px;
+    margin: 0 auto 63px auto;
+ }
+
+ .foot {
+    color: base.$white_color;
+    background-color: #393939;
+    font-size: 14px;
+
+    &__flexBox {
+        display: flex;
+    }
+    &__box {
+        width: 335px;
+        margin: 0 auto;
+        padding: 60px 0 69px 0;
+        @include base.mq(tab) {
+            width: 800px;
+        }
+    }
+    &__miniBox--B {
+        @include base.mq(tab) {
+            display: flex;
+        }
+    }
+    &__main {
+        width: 165px;
+        @include base.mq(tab) {
+            width: 200px;
+        }
+    }
+    &__contact {
+        @include base.mq(tab) {
+            position: relative;
+            top: -80px;
+            left: 700px;
+        }
+    }
+    &__carplan {
+        width: 165px;
+        margin: 0 0 0 auto;
+        @include base.mq(tab) {
+            width: 280px;
+        }
+    }
+    &__access {
+        margin-top: 64px;
+        @include base.mq(tab) {
+            margin-top: 0px;
+        }
+    }
+    &__mr {
+        margin-bottom: 30px;
+        @include base.mq(tab) {
+            margin-bottom: 10px;
+        }
+    }
+
+    // コピーライト
+    &__cr {
+        font-size: 12px;
+        margin-top: 69px;
+        text-align: center;
+        @include base.mq(tab) {
+            position: relative;
+            top: 60px;
+            margin-top: 200px;
+        }
+    }
+ }

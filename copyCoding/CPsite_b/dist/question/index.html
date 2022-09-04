@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>-</title>
+
+        <!-- OGP -->
+        <meta property="og:url" content="" />
+        <meta property="og:type" content="" />
+        <meta property="og:title" content="" />
+        <meta property="og:description" content="" />
+        <meta property="og:site_name" content="" />
+        <meta property="og:image" content="" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../common/scss/style.css">
+        <link rel="stylesheet" href="scss/style.css">
+
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="head">
+        <!-- ハンバーガーメニュー -->
+        <div id="app"><!-- 仮想DOM -->
+            <div class="head__bigBox">
+                <a href="../index.html"><img class="head__logo" src="../common/img/logo.png" alt="logo"></a>
+                <nav class="head__navPC">
+                    <ul class="head__itemPC">
+                        <li>-</li>
+                        <li><a href="../plan/index.html">-</a></li>
+                        <li>-</li>
+                        <li><a href="../access/index.html">-</a></li>
+                        <li><a href="./index.html">-</a></li>
+                        <li class="head__btnYellow">-</li>
+                    </ul>
+                </nav>
+                <div @click="hamburgerToggle" class="head__box">
+                    <div class="head__ham">
+                        <span :class="{active__lineA:isShow}" class="head__line"></span>
+                        <span :class="{active__lineB:isShow}" class="head__line"></span>
+                        <span :class="{active__lineC:isShow}" class="head__line"></span>
+                    </div>
+                    <span class="head__menu">MENU</span>
+                </div>
+            </div>
+            <!-- ナビゲーションメニュー -->
+            <transition>
+                <nav v-show="isShow" v-cloak class="head__nav">
+                    <ul class="head__item">
+                        <li><a href="../index.html">-</a></li>
+                        <li>-</li>
+                        <li><a href="../plan/index.html">-</a></li>
+                        <li>-</li>
+                        <li>-</li>
+                        <li>-</li>
+                        <li><a href="../access/index.html">-</a></li>
+                        <li><a href="./index.html">-</a></li>
+                    </ul>
+                </nav>
+            </transition>
+        </div>
+    </header>
+
+    <main>
+        <!-- よくあるご質問 -->
+        <section class="que">
+            <h1 class="que__til--ver">-</h1>
+            <div class="que__box">
+                <div class="que__q">
+                    <img src="../common/img/que_q.png" alt="que_q">
+                    <p>-</p>
+                </div>
+                <div class="que__a">
+                    <img src="../common/img/que_a.png" alt="que_a">
+                    <p>-<span>-</span>-<span>-</span></p>
+                </div>
+            </div>
+            <div class="que__box">
+                <div class="que__q">
+                    <img src="../common/img/que_q.png" alt="que_q">
+                    <p>-</p>
+                </div>
+                <div class="que__a">
+                    <img src="../common/img/que_a.png" alt="que_a">
+                    <p>-<span>-</span>-<span>-</span></p>
+                </div>
+            </div>
+            <div class="que__box">
+                <div class="que__q">
+                    <img src="../common/img/que_q.png" alt="que_q">
+                    <p class="que__p">-</p>
+                </div>
+                <div class="que__a">
+                    <img src="../common/img/que_a.png" alt="que_a">
+                    <p>-<span>-</span>-</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="colorGrade">
+            <div class="colorGrade__sen">
+                <div class="colorGrade__inline">
+                    <p>-</p>
+                    <div class="colorGrade__redLine">
+                        <p>-</p>
+                        <p>-</p>
+                        <p>-</p>
+                    </div>
+                </div>
+                <p>-</p>
+            </div>
+            <div class="colorGrade__pic">
+                <div class="colorGrade__choise">
+                    <!-- ※疑似要素で引き出しを忘れずに※ -->
+                    <div class="colorGrade__spBlle">
+                        <p>-<span>-</span></p>
+                    </div>
+                    <img src="../common/img/redcar.png" alt="redcar">
+                    <div class="colorGrade__btn">
+                        <button class="colorGrade__sw"><span>-</span>-</button>
+                    </div>
+                </div>
+                <div class="colorGrade__choise">
+                    <img src="../common/img/aquacar.png" alt="aquacar">
+                    <div class="colorGrade__btn colorGrade__btn--red">
+                        <button class="colorGrade__sw"><span>-</span>-</button>
+                    </div>
+                </div>
+                <div class="colorGrade__choise colorGrade__choise--mr">
+                    <!-- 疑似要素で引き出しを忘れずに -->
+                    <div class="colorGrade__spBlle colorGrade__spBlle--purple">
+                        <p>-<span>-</span></p>
+                    </div>
+                    <img src="../common/img/blackcar.png" alt="blackcar">
+                    <div class="colorGrade__btn colorGrade__btn--purple">
+                        <button class="colorGrade__sw"><span>-</span>-</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="webBonus">
+            <img src="../common/img/webBonus.png" alt="webBonus">
+        </section>
+
+        <section class="que">
+            <h2 class="form__til">-</h2>
+
+            <div class="form__subTil">
+                <p>-
+                    <span>-</span></p>
+            </div>
+
+            <!-- フォーム -->
+            <!-- 疑似要素で"必須"表示忘れずに -->
+            <div class="form">
+                <form action="#">
+                    <div class="form__name">
+                        <label for="name">お名前</label>
+                        <input type="text" id="name" placeholder="山田太郎">
+                    </div>
+                    <div class="form__name">
+                        <label for="furigana">フリガナ</label>
+                        <input type="text" id="furigana" placeholder="ヤマダタロウ">
+                    </div>
+                    <div class="form__tel">
+                        <label for="tel">電話番号</label>
+                        <input type="text" id="furigana" placeholder="携帯可">
+                    </div>
+                    <div class="form__mail">
+                        <label for="mail">メールアドレス</label>
+                        <input type="email" id="mail" placeholder="example@yamada.com">
+                    </div>
+                    <div class="form__loan">
+                        <h3>ローン事前審査のご希望</h3>
+                        <input type="checkbox" id="loan"><label for="loan">ローン事前審査を希望</label>
+                    </div>
+                    <div class="form__car">
+                        <label for="car">お問い合わせ物</label>
+                        <input type="text" id="car" placeholder="気になる物を入力してください">
+                    </div>
+                    <div class="form__contact">
+                        <label for="contact">お問い合わせ内容</label>
+                        <textarea name="message__box" id="contact" placeholder="ご入力ください"></textarea>
+                    </div>
+                    <div class="form__policy">
+                        <input type="checkbox" id="policy"><label for="policy"><a href="">プライバシーポリシー</a><img src="../common/img/policy_block.png" alt="policy_block">に同意します。</label>
+                    </div>
+                    <div class="form__planBox">
+                        <button class="form__planBtn">入力内容を確認する</button>
+                    </div>
+                </form>
+                <div class="form__attention">
+                    <p>-
+                        <span class="form__attention--sent">-</span>-
+                        <span class="form__attention--newLine">-</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 店舗情報 -->
+        <section class="store">
+            <h1 class="store__til">-</h1>
+            <div class="store__info">
+                <div>
+                    <div class="store__jump">
+                        <h2>-</h2>
+                        <!-- 疑似要素で右矢印 -->
+                        <a href="">-</a>
+                    </div>
+                    <!-- 白い線 -->
+                    <div class="store__line"></div>
+                    <div class="store__box">
+                        <ul class="store__detTil">
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item--last">-</li>
+                        </ul>
+                        <ul class="store__detSent">
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item--last">-</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Google Map API連携 -->
+                <div class="googleMap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.470668768274!2d135.47362381566055!3d34.59225798046246!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000ddb7d71c5839%3A0x6014e311c04cf954!2z5paw6LuK5biC5aC0IOWguumJhOegsueUuuW6lw!5e0!3m2!1sja!2sjp!4v1658644571104!5m2!1sja!2sjp" width="335" height="225" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+                <div class="reco__planBox store__btnPc">
+                    <button class="reco__planBtn">-</button>
+                </div>
+                <div class="store__pd"></div>
+            </div>
+
+            <div class="store__info">
+                <div>
+                    <div class="store__jump">
+                        <h2>-</h2>
+                        <!-- 疑似要素で右矢印 -->
+                        <a href="">-</a>
+                    </div>
+                    <!-- 白い線 -->
+                    <div class="store__line"></div>
+                    <div class="store__box">
+                        <ul class="store__detTil">
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__itemç">-</li>
+                        </ul>
+                        <ul class="store__detSent">
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item--last">-</li>
+                        </ul>
+                    </div> 
+                </div>
+
+                <!-- Google Map API連携 -->
+                <div class="googleMap">
+                    <iframe src=></iframe>
+                </div>
+                 
+                <div class="reco__planBox store__btnPc">
+                    <button class="reco__planBtn">-</button>
+                </div>
+                <div class="store__pd"></div>
+            </div>
+        </section>
+        <!-- 関連サイト -->
+        <div class="connne__backYellowPc">
+            <div class="connne">
+                <h2>関連サイト</h2>
+                <ul class="connne__list">
+                    <li class="connne__item"><div class="connne__itemBox--A"><img src="../common/img/yoshi.png" alt="yoshi"></div></li>
+                    <li class="connne__item"><div class="connne__itemBox--B"><img src="../common/img/car_site.png" alt="car_site"></div></li>
+                    <li class="connne__item"><div class="connne__itemBox--C"><img src="../common/img/keinomori.png" alt="keinomori"></div></li>
+                    <li class="connne__item"><div class="connne__itemBox--D"><img src="../common/img/keipark.png" alt="keipark"></div></li>
+                    <li class="connne__item"><div class="connne__itemBox--E"><img src="../common/img/sensyakingdom.png" alt="sensyakingdom"></div></li>
+                    <li class="connne__item"><div class="connne__itemBox--F"><img src="../common/img/mahha.png" alt="mahha"></div></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 下部ナビゲーションメニュー -->
+        <div class="underNav">
+            <ul class="underNav__menu">
+                <li class="underNav__item--A"><img src="../common/img/phoneUnder.png" alt="phoneUnder">-</li>
+                <li class="underNav__item--B"><img src="../common/img/mailUnder.png" alt="mailUnder">-</li>
+                <li class="underNav__item--C"><a href="./index.html"><img src="../common/img/accessUnder.png" alt="accessUnder">-</a></li>
+                <li class="underNav__item--D"><a href="#top"><img src="../common/img/upperUnder.png" alt="upperUnder">-</a></li>
+            </ul>
+        </div>
+    </main>     
+
+    <!-- フッター -->
+    <footer class="foot">
+        <div class="foot__box">
+            <div class="foot__flexBox">
+                <div class="foot__miniBox--A">
+                    <ul class="foot__main">
+                        <li class="foot__mr"><a href="../index.html">-</a></li>
+                        <li class="foot__mr"><a href="../plan/index.html">-</a></li>
+                        <li class="foot__mr"><a href="./index.html">-</a></li>
+                    </ul>
+                    <div class="foot__contact">
+                        <a href="">-</a>
+                    </div>
+                </div>
+                <div class="foot__miniBox--B">
+                    <ul class="foot__carplan">
+                        <li class="foot__mr"><a href="">-</a></li>
+                        <li class="foot__mr"><a href="">-</a></li>
+                        <li class="foot__mr"><a href="">-</a></li>
+                        <li><a href="">-</a></li>
+                    </ul>
+                    <ul class="foot__access">
+                        <li class="foot__mr"><a href="">-</a></li>
+                        <li><a href="">-</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- コピーライト -->
+            <div class="foot__cr">
+                <p>Copyright &copy; -</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vueの読み込み(ver2系) -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data(){
+                return {
+                     isShow: false
+                }
+            },
+            methods: {
+                hamburgerToggle() {
+                    // if(this.isShow = false) {
+                    //     this.isShow = true
+                    //     console.log('反応してるぅ！？')
+                    // }
+                    //this.isShow = true
+                    if(this.isShow === false) {
+                        this.isShow = true;
+                        console.log('if文上手く言ってる？');
+                    } else if(this.isShow === true) {
+                        this.isShow = false;
+                        console.log('else文上手く言ってる？');
+                    }
+                    console.log('ボタン反応してる？')
+                }
+            },
+        })
+    </script>
+    <style>
+        /* ナビゲーションメニューのアニメーション */
+        @keyframes slide {
+        0% {
+            transform: translateX(280px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+        }
+        @keyframes outSlide {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(280px);
+        }
+        }
+
+        .v-enter-active, .v-leave-active {
+            animation-name: slide;
+            animation-duration: .5s;
+            animation-timing-function: ease;
+        }
+        .v-enter-from, .v-leave-to {
+            animation-name: outSlide;
+            animation-duration: .5s;
+            animation-timing-function: ease;
+        }
+
+        /* 読み込み時に非表示の仮想DOMを表示されないようにする */
+        [v-cloak] {
+            display: none;
+        }
+
+        /* ハンバーガーメニューボタンのアニメーション */
+        .active__lineA{
+            top: 10px !important;
+            transform: rotate(45deg);
+        }
+        .active__lineB {
+            opacity: 0;
+        }
+        .active__lineC {
+            top: 10px !important;
+            transform: rotate(-45deg);
+        }
+    </style>
+</body>
+</html>

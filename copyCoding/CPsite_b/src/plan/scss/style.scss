@@ -1,0 +1,605 @@
+@charset 'UTF-8';
+
+// base.scssの呼び出し
+@use '../../common/scss/_modules/base' as base;		// ← _modules内の_base.scss
+
+// ヘッダー
+.head {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    width: 100%;
+    height: 65px;
+    padding-bottom: 65px;
+    background-color: base.$blue_color;
+
+    &__logo {
+        position: relative;
+        top: 0;
+        left: 15px;
+        width: 120px;
+        height: 35px;
+        margin: 15px 0 15px 0;
+        @include base.mq(tab) {
+            left: 35px;
+        }
+        @include base.mq(pc) {
+            left: 140px;
+        }
+    }
+
+    &__bigBox {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    // PCサイズのナビゲーション
+     &__itemPC {
+        display: none;
+        font-size: 15px;
+        font-weight: bold;
+        line-height: 65px;
+        color: base.$white_color;
+
+        & li {
+            cursor: pointer;
+        }
+        @include base.mq(tab) {
+            display: flex;
+            padding-right: 35px;
+            & li {
+                margin-left: 10px;
+            }
+        }
+        @include base.mq(pc) {
+            padding-right: 140px;
+            & li {
+                margin-left: 20px;
+            }
+        }
+        @include base.mq(max) {
+            & li {
+                margin-left: 50px;
+            }
+        }
+     }
+
+     &__btnYellow {
+        width: 125px;
+        height: 35px;
+        text-align: center;
+        line-height: 35px;
+        border-radius: 4px;
+        position: relative;
+        top: 15px;
+        background-color: base.$yellow_color;
+        color: base.$blue_color;
+     }
+}
+
+main {
+    padding-top: 65px;
+}
+
+.planVisual {
+    @include base.mq(tab) {
+        margin-top: 10px;
+    }
+    &__qa {
+        width: 335px;
+        margin: 0 auto;
+        padding-top: 25px;
+        @include base.mq(tab) {
+            width: 1000px;
+            display: flex;
+            padding-left: 30px;
+        }
+    }
+    &__img--A {
+        width: 285px;
+        margin: 0 auto;
+        @include base.mq(tab) {
+            width: 400px;
+            height: 50px;
+            margin: 0;
+        }
+    }
+    &__img--B{
+        width: 218px;
+        margin: 10px auto 0 auto;
+        @include base.mq(tab) {
+            width: 300px;
+            margin: 0;
+            position: relative;
+            bottom: 10px;
+            left: 5px;
+        }
+    }
+
+    &__sugg {
+        width: 335px;
+        margin: 0 auto;
+        padding-top: 25px;
+        @include base.mq(tab) {
+            width: 1000px;
+            display: flex;
+        }
+    }
+    &__img--C{
+        width: 300px;
+        margin: 0 auto;
+        @include base.mq(tab) {
+            margin: 0;
+        }
+    }
+    &__img--D{
+        width: 245px;
+        margin: 10px auto 0 auto;
+        @include base.mq(tab) {
+            margin: 0;
+        }
+    }
+    &__car {
+        @include base.mq(tab) {
+            width: 1000px;
+        }
+    }
+    &__img--E{
+        width: 405px;
+        margin: 0 auto;
+        @include base.mq(tab) {
+            margin: 0 0 0 auto;
+        }
+    }
+}
+
+.threePoint {
+    width: 335px;
+    margin: 63px auto 45px auto;
+    @include base.mq(tab) {
+        width: 1000px;
+        display: flex;
+        column-gap: 10px;
+    }
+
+    & h2 {
+        margin: 20px 0 20px 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: base.$red_Color;
+        text-align: center;
+    }
+
+    &__box {
+        width: 100%;
+        height: 305px;
+        background-color: base.$yellow_color;
+        border-radius: 6px;
+    }
+
+    &__reco {
+        width: 97px;
+        margin: 0 auto;
+        padding-top: 17px;
+    }
+
+    // 円グループ
+    &__flex {
+        &--A {
+            width: 290px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+        }
+        &--B {
+            width: 190px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;       
+        }
+    }
+    &__item {
+        width: 90px;
+        height: 90px;
+        border-radius: 50px;
+    }
+    &__color {
+        &--A {
+            background-color: base.$green_color;
+        }
+        &--B {
+            background-color: #00AFC6;
+        }
+        &--C {
+            background-color: base.$blue_color;
+        }
+        &--D {
+            background-color: base.$pink_color;
+        }
+        &--E {
+            background-color: base.$purple_color;
+        }
+    }
+    &__seven {
+        width: 45px;
+        padding-top: 19px;
+        margin: 0 auto;
+    }
+    &__sent {
+        height: 19px;
+        margin: 10px auto 0 auto;
+    }
+
+    // 注意文章
+    &__attention {
+        display: block;
+        margin-top: 7px;
+        margin-bottom: 17px;
+        font-size: 10px;
+        font-weight: bold;
+    }
+
+    // ポイント②のメッセージボックス
+    &__messeA {
+        width: 305px;
+        height: 80px;
+        line-height: 26px;
+        margin: 0 auto 10px auto;
+        text-align: center;
+        background-color: base.$white_color;
+        border-radius: 6px;
+        & p {
+            font-size: 17px;
+            font-weight: bold;
+        }
+        &--pd {
+            padding-top: 14px;
+        }
+    }
+    &__messeB {
+        width: 305px;
+        height: 45px;
+        line-height: 45px;
+        margin: 0 auto;
+        text-align: center;
+        background-color: base.$white_color;
+        border-radius: 6px;
+        & p {
+            font-size: 17px;
+            font-weight: bold;
+        }
+    }
+    &__mr {
+        margin-bottom: 20px;
+        &--B {
+            margin-bottom: 50px;
+        }
+    }
+
+    &__messeC {
+        width: 305px;
+        height: 115px;
+        margin: 0 auto;
+        background-color: base.$white_color;
+        border-radius: 6px;
+        text-align: center;
+        & p {
+            font-size: 17px;
+            line-height: 30px;
+            font-weight: bold;
+        }
+    }
+}
+
+.value {
+    @include base.mq(tab) {
+        width: 1000px;
+        margin: 0 auto 58px auto;
+    }
+    margin-bottom: 58px;
+
+    &__title {
+        width: 335px;
+        margin: 0 auto;
+        @include base.mq(tab) {
+            width: 1000px;
+            display: flex;
+            padding-top: 30px;
+        }
+    }
+    &__messe {
+        & h2 {
+            font-size: 30px;
+            font-weight: bold;
+            color: base.$red_Color;
+            margin-bottom: 20px;
+        }
+
+        & p {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: 30px;
+            color: base.$blue_color;
+            @include base.mq(tab) {
+                width: 440px;
+            }
+            & span {
+                color: base.$red_Color;
+            }
+        }
+    }
+
+    &__car {
+        width: 262px;
+        margin: 20px auto 48px auto;
+        @include base.mq(tab) {
+            margin: 0 0 48px auto;
+        }
+    }
+
+    &__bigTil {
+        width: 297px;
+        margin: 0 auto 16px auto;
+        font-size: 30px;
+        font-weight: bold;
+        color: base.$blue_color;
+        text-align: center;
+        @include base.mq(tab) {
+            width: 500px;
+            margin: 0 auto 16px 0;
+        }
+    }
+
+    // 4つの特徴
+    &__list {
+        @include base.mq(tab) {
+            display: flex;
+            column-gap: 10px;
+        }
+    }
+    &__item {
+        position: relative;
+        width: 335px;
+        height: 85px;
+        text-align: center;
+        border-radius: 6px;
+        margin: 0 auto 15px auto;
+        background-color: #b4cce5;
+
+        & h2 {
+            padding-top: 16px;
+            font-size: 16px;
+            font-weight: bold;
+            color: base.$blue_color;
+        }
+        & p {
+            margin-top: 8px;
+            font-size: 14px;
+            font-weight: bold;
+            & span {
+                display: block;
+            }
+        }
+    }
+    &__sbTil {
+        &--A {
+            &::before {
+                content: '1';
+                font-size: 30px;
+                position: absolute;
+                right: 300px;
+                top: 5px;
+                @include base.mq(tab) {
+                    right: 210px;
+                }
+            }
+        }
+        &--B {
+            &::before {
+                content: '2';
+                font-size: 30px;
+                position: absolute;
+                right: 300px;
+                top: 5px;
+                @include base.mq(tab) {
+                    right: 210px;
+                }
+            }
+        }
+        &--C {
+            &::before {
+                content: '3';
+                font-size: 30px;
+                position: absolute;
+                right: 300px;
+                top: 5px;
+                @include base.mq(tab) {
+                    right: 210px;
+                }
+            }
+        }
+        &--D {
+            &::before {
+                content: '4';
+                font-size: 30px;
+                position: absolute;
+                right: 300px;
+                top: 5px;
+                @include base.mq(tab) {
+                    right: 210px;
+                }
+            }
+        }
+    }
+}
+
+// 全てのカラーグレードからお選びいただけます！
+.colorGrade {
+    &__sen {
+        width: 335px;
+        line-height: 40px;
+        margin: 0 auto 49px auto;
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+        @include base.mq(tab) {
+            width: 1000px;
+        }
+    }
+    &__redLine {
+        display: flex;
+        justify-content: space-between;
+        font-size: 33px;
+        color: base.$red_Color;
+        text-decoration: underline;
+    }
+    &__inline {
+        @include base.mq(tab) {
+            width: 500px;
+            display: flex;
+            margin: 0 auto;
+        }
+        & p {
+            @include base.mq(tab) {
+                margin-right: 30px;
+            }
+        }
+    }
+
+    // 車の写真
+    &__pic {
+        @include base.mq(tab) {
+            width: 1000px;
+            display: flex;
+            column-gap: 50px;
+            margin: 0 auto;
+        }
+    }
+
+    &__choise {
+        position: relative;
+        & img {
+            width: 300px;
+            margin: 0 auto;
+        }
+        &--mr {
+            margin-top: 68px;
+            @include base.mq(tab) {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    // ボタン関係
+    &__btn {
+        position: relative;
+        font-size: 20px;
+        font-weight: bold;
+        color: base.$white_color;
+        text-align: center;
+        width: 300px;
+        height: 50px;
+        margin: 0 auto 35px auto;
+        line-height: 50px;
+        background-color: base.$green_color;
+        box-shadow: 0 5px #23761B;
+        border-radius: 4px;
+        &:hover {
+            transform: translate3d(0, 5px, 0);
+            box-shadow: none;
+            background-color: #a5ec9f;
+        }
+        &--red {
+            background-color: base.$red_Color;
+            box-shadow: 0 5px #A02020;
+            &:hover {
+                transform: translate3d(0, 5px, 0);
+                box-shadow: none;
+                background-color: #ec9f9f;
+            }
+        }
+        &--purple {
+            background-color: base.$purple_color;
+            box-shadow: 0 5px #3E1C65;
+            &:hover {
+                transform: translate3d(0, 5px, 0);
+                box-shadow: none;
+                background-color: #d29fec;
+            }
+        }
+    }
+
+    &__sw {
+        width: 300px;
+        height: 50px;
+
+        & span {
+            font-size: 35px;
+        }
+        &::before {
+            content: '▶︎';
+            position: absolute;
+            top: 0;
+            left: 17px;
+        }
+    }
+
+    // 吹き出し
+    &__spBlle {
+        position: absolute;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        bottom: 220px;
+        left: 10px;
+        text-align: center;
+        color: base.$white_color;
+        font-size: 14px;
+        background: base.$green_color;
+        border-radius: 50%;
+        box-sizing: border-box;
+        @include base.mq(tab) {
+            top: -85px;
+        }
+        & p {
+            position: absolute;
+            top: 30px;
+            left: 10px;
+            transform: rotate(-15deg);
+        }
+        & span {
+            display: block;
+        }
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            right: 20px;
+            margin-top: -15px;
+            border: 8px solid transparent;
+            border-left: 15px solid base.$green_color;
+            z-index: 0;
+            transform: rotate(65deg);
+          }
+
+        // 最後の吹き出し
+        &--purple {
+            background: base.$purple_color;
+            @include base.mq(tab) {
+                left: 200px;
+            }
+            &::before {
+                border-left: 15px solid base.$purple_color;
+                @include base.mq(tab) {
+                    right: 60px;
+                    transform: rotate(115deg);
+                }
+            }
+            & p {
+                @include base.mq(tab) {
+                    transform: rotate(15deg);
+                }
+            }
+        }
+    }
+}

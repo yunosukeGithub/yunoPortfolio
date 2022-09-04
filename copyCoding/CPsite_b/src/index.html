@@ -1,0 +1,1189 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>---</title>
+
+    <!-- OGP -->
+    <meta property="og:url" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:title" content="" />
+    <meta property="og:description" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:image" content="" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./common/scss/style.css">
+    <link rel="stylesheet" href="scss/style.css">
+
+</head>
+<body>
+    <!-- ヘッダー -->
+    <header class="head">
+        <!-- ハンバーガーメニュー -->
+        <div id="app"><!-- 仮想DOM -->
+            <div class="head__bigBox">
+                <a href="./index.html"><img class="head__logo" src="./common/img/logo.png" alt="logo"></a>
+                <nav class="head__navPC">
+                    <ul class="head__itemPC">
+                        <li>---</li>
+                        <li><a href="./plan/index.html">---</a></li>
+                        <li>---</li>
+                        <li><a href="./access/index.html">---</a></li>
+                        <li><a href="./question/index.html">---</a></li>
+                        <li class="head__btnYellow">---</li>
+                    </ul>
+                </nav>
+            </div>
+            <div @click="hamburgerToggle" class="head__box">
+                <div class="head__ham">
+                    <span :class="{active__lineA:isShow}" class="head__line"></span>
+                    <span :class="{active__lineB:isShow}" class="head__line"></span>
+                    <span :class="{active__lineC:isShow}" class="head__line"></span>
+                </div>
+                <span class="head__menu">MENU</span>
+            </div>
+            <!-- ナビゲーションメニュー -->
+            <transition>
+                <nav v-show="isShow" v-cloak class="head__nav">
+                    <ul class="head__item">
+                        <li><a href="./index.html">---</a></li>
+                        <li>---</li>
+                        <li><a href="./plan/index.html">---</a></li>
+                        <li>---</li>
+                        <li>---</li>
+                        <li>---</li>
+                        <li><a href="./access/index.html">---</a></li>
+                        <li><a href="./question/index.html">---</a></li>
+                    </ul>
+                </nav>
+            </transition>
+        </div>
+    </header>
+    
+    <!-- メイン -->
+    <main>
+        <!-- メインヴィジュアル -->
+        <div class="main" id="top">
+            <div class="main__box">
+                <!-- 背景 -->
+                <img class="main__back" src="./img/main_back_sp.png" alt="main_back_sp">
+                <img class="main__backPc" src="./img/maivisualBackPc.png" alt="maivisualBackPc">
+                <!-- メインヴィジュアル 見出し -->
+                <div class="contentWidth">
+                    <div class="main__til">
+                        <div class="mainVisual__flex">
+                            <img class="mainVisual__logo" src="./common/img/logo.png" alt="logo">
+                            <img class="mainVisual__tilOne" src="./img/main_til_one.png" alt="main_til_one">
+                        </div>
+                        <img class="mainVisual__tilTwo" src="./img/mian_til_two.png" alt="main_til_two">
+                        <div class="mainVisual__case">
+                            <img class="mainVisual__starOne" src="./img/main_star_one.png" alt="main_star_one">
+                            <img class="mainVisual__starTwo" src="./img/main_star_two.png" alt="main_star_two">
+                            <img class="mainVisual__tilThree" src="./img/main_til_three.png" alt="main_til_three">
+                        </div>
+                    </div>
+                </div>
+                <div class="main__img">
+                    <img class="main__masuyama" src="./img/masuyama_two.png" alt="masuyama_two">
+                        <ul class="main__cars">
+                            <li><img class="main__carOne" src="./img/main_car_one.png" alt="main_car_one"></li>
+                            <li><img class="main__carTwo" src="./img/main_car_two.png" alt="main_car_two"></li>
+                            <li><img class="main__carThree" src="./img/main_car_three.png" alt="main_car_three"></li>
+                        </ul>
+                    <img class="main__doumae" src="./img/doumae_two.png" alt="doumae_two">
+                </div>
+            </div>
+            <h2 class="main__det">---</h2>
+            <div class="main__cam">
+                <p class="main__bar">---</p>
+            </div>
+            <div class="main__inq">
+                <div class="main__imm">
+                    <div class="main__contactBox">
+                        <img class="main__imgHuman" src="./img/main_inq_human.png" alt="main_inq_human">
+                        <div class="main__immBox">
+                            <img class="main__imgMessage--one" src="./img/main_inq_pone.png" alt="main_inq_pone">
+                            <img class="main__imgMessage--two" src="./img/main_inq_ptwo.png" alt="main_inq_ptwo">
+                        </div>
+                    </div>
+                </div>
+                <div class="main__bt">
+                    <div class="main__btmail">
+                        <button><img src="./img/envelope.png" alt="envelope"></button>
+                        <p>---</p>
+                    </div>
+                    <div class="main__bttel">
+                        <button><img src="./img/phone.png" alt="phone"></button>
+                        <p>---</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="sele">
+            <!-- タイトル -->
+            <div class="sele__imgTop"><img src="./img/sele_til.png" alt="sele_til"></div>
+            <ul class="sele__feat">
+                <li class="sele__one"><p>---</p></li>
+                <li class="sele__two"><p>---</p></li>
+                <li class="sele__three"><p>---</p></li>
+            </ul>
+        </section>
+
+        <section class="seletwo">
+            <!-- タイトル -->
+            <div class="seletwo__til">
+                <img src="./img/sele_til.png" alt="sele_til">
+                <h1><span class="seletwo__spBr"><span class="seletwo__redLine">---</h1>
+            </div>
+
+            <div class="seletwo__tantCase">
+                <p class="seletwo__tantFont">---<span class="seletwo__caseFont">---</span></p>
+                <div class="seletwo__yellowLine"></div>
+            </div>
+            <h3 class="seletwo__carCost">---</h3>
+
+            <div class="seletwo__visualMessage">
+                <img class="seletwo__tantoBack" src="./img/tanto_back.png" alt="tanto_back">
+                <div class="seletwo__tantoBox">
+                    <img class="seletwo__tantoCar" src="./img/tanto_01.png" alt="tanto_01">
+                    <img class="seletwo__masuyamaTanto" src="./img/masuyama_tanto.png" alt="masuyama_tanto">
+                    <img class="seletwo__tilMesse" src="./img/main_til_three.png" alt="main_til_three">
+                    <img class="seletwo__starOne" src="./img/main_star_one.png" alt="main_star_one">
+                </div>
+                <div class="seletwo__messeCost">
+                    <p>---</p>
+                </div>
+            </div>
+
+            <ul class="seletwo__grid">
+                <li class="seletwo__gridLayoutA"><img src="./common/img/plan_orange.png" alt="plan_orange"></li>
+                <li class="seletwo__gridLayoutB"><img class="seletwo__sevenYear" src="./common/img/plan_green_one.png" alt="plan_green_one"><img class="seletwo__imgMesse" src="./common/img/plan_green_two.png" alt="plan_green_two"></li>
+                <li class="seletwo__gridLayoutC"><img class="seletwo__sevenYear" src="./common/img/plan_aqua_one.png" alt="plan_aqua_one"><img class="seletwo__imgMesse" src="./common/img/plan_aqua_two.png" alt="plan_aqua_two"></li>
+                <li class="seletwo__gridLayoutD"><img class="seletwo__sevenYear" src="./common/img/plan_blue_one.png" alt="plan_blue_one"><img class="seletwo__imgMesse" src="./common/img/plan_blue_two.png" alt="plan_blue_two"></li>
+                <li class="seletwo__gridLayoutE"><img class="seletwo__sevenYear" src="./common/img/plan_pink_one.png" alt="plan_pink_one"><img class="seletwo__imgMesse" src="./common/img/plan_pink_two.png" alt="plan_aqua_two"></li>
+                <li class="seletwo__gridLayoutF"><img class="seletwo__sevenYear" src="./common/img/plan_vio_one.png" alt="plan_vio_one"><img class="seletwo__imgMesse" src="./common/img/plan_vio_two.png" alt="plan_vio_two"></li>
+            </ul>
+
+            <div class="seletwo__subTil"><h2>---<span>---</span></h2></div>
+
+            <div class="comp">
+                <div class="comp__subTil"><h2>---</h2></div>
+                <div class="comp__box">
+                    <h3>---</h3>
+                    <div class="comp__diff">
+                        <div class="comp__graph">
+                            <ul class="comp__det">
+                                <li>---</li>
+                                <li>---</li>
+                                <li>---</li>
+                                <li class="comp__underLine">---</li>
+                            </ul>
+                            <div class="comp__img">
+                                <div class="comp__squareBox">
+                                    <div class="comp__norgra--shadow"></div>
+                                    <div class="comp__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="comp__squareBox">
+                                    <div class="comp__norgra--shadow"></div>
+                                    <div class="comp__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="comp__squareBox">
+                                    <div class="comp__norgra"></div>
+                                    <div class="comp__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="comp__squareBox">
+                                    <div class="comp__norgra--shadow"></div>
+                                    <div class="comp__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="comp__squareBox">
+                                    <div class="comp__norgra"></div>
+                                    <div class="comp__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="comp__squareBox">
+                                    <div class="comp__norgra--shadow"></div>
+                                    <div class="comp__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="comp__squareBox">
+                                    <div class="comp__norgra--shadow"></div>
+                                    <div class="comp__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="seletwo__down"></div>
+
+            <div class="newcase">
+                <div class="newcase__til">
+                    <h2 class="newcase__tilMessage">---</h2>
+                </div>
+                <div class="newcase__box">
+                    <h3>---</h3>
+                    <div class="newcase__arrow"></div>
+                    <div class="newcase__diff">
+                        <div class="newcase__graph">
+                            <ul class="newcase__det">
+                                <li class="newcase__underLine">---</li>
+                            </ul>
+                            <div class="newcase__img">
+                                <div class="newcase__squareBox">
+                                    <div class="newcase__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="newcase__squareBox">
+                                    <div class="newcase__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="newcase__squareBox">
+                                    <div class="newcase__norgra"></div>
+                                    <p>---</p>    
+                                </div>
+                                <div class="newcase__squareBox">
+                                    <div class="newcase__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="newcase__squareBox">
+                                    <div class="newcase__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="newcase__squareBox">
+                                    <div class="newcase__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                                <div class="newcase__squareBox">
+                                    <div class="newcase__norgra"></div>
+                                    <p>---</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="proce">
+                <h3 class="proce__til">---<span class="span__Text">---</span></h3>
+                <div class="proce__subtil">
+                    <div class="proce__blank"></div>
+                    <div class="proce__yellow"><p>---</p></div>
+                    <div class="proce__blue"><p>---<span>---</span></p></div>
+                </div>
+                <div class="proce__td">
+                    <img src="./img/kanmuri.png" alt="kanmuri">
+                    <div class="verone__blue"><p>---</p></div>
+                    <div class="verone__yellow"><p class="word__red">---</p></div>
+                    <div class="verone__sky"><p class="word__black">---</p></div>
+                </div>
+                <div class="proce__td">
+                    <img src="./img/kanmuri.png" alt="kanmuri">
+                    <div class="verone__thinblue--A"><p><span class="sevenYear__text">---</span>---</p></div>
+                    <div class="verone__thinyellow"><p class="word__red">---</p></div>
+                    <div class="verone__aqua"></p><p class="word__black">---</p></div>
+                </div>
+                <div class="proce__td">
+                    <img src="./img/kanmuri.png" alt="kanmuri">
+                    <div class="verone__blue--A"><p><span class="sevenYear__text">---</span>---</p></div>
+                    <div class="verone__yellow"><p class="word__red">---</p></div>
+                    <div class="verone__sky"><p class="word__black">---</p></div>
+                </div>
+                <div class="proce__td">
+                    <img src="./img/kanmuri.png" alt="kanmuri">
+                    <div class="verone__thinblue--A"><p><span class="sevenYear__text">---</span>---</p></div>
+                    <div class="verone__thinyellow"><p class="word__red">---</p></div>
+                    <div class="verone__aqua"><p class="word__black">---</p></div>
+                </div>
+                <div class="proce__td">
+                    <img src="./img/kanmuri.png" alt="kanmuri">
+                    <div class="verone__blue"><p>---</p></div>
+                    <div class="verone__yellow"><p class="word__red">---</p></div>
+                    <div class="verone__sky"><p class="word__black">---</p></div>
+                </div>
+
+                <div class="eyeCatch">
+                    <img class="eyeCatch__big--A" src="./img/sirokira_dai.png" alt="sirokira_dai">
+                    <img class="eyeCatch__small--A" src="./img/sirokira_chibi.png" alt="sirokira_chibi">
+                    <img class="eyeCatch__big--B" src="./img/sirokira_dai.png" alt="sirokira_dai">
+                    <img class="eyeCatch__small--B" src="./img/sirokira_chibi.png" alt="sirokira_chibi">
+                    <img class="eyeCatch__big--C" src="./img/sirokira_dai.png" alt="sirokira_dai">
+                    <img class="eyeCatch__small--C" src="./img/sirokira_chibi.png" alt="sirokira_chibi">
+                    <div class="eyeCatch__center">
+                        <p class="eyeCatch__vert">---</p>
+                        <p class="eyeCatch__bigFont">---<span class="eyeCatch__bigFont--vert">---</span></p>
+                        <p class="eyeCatch__vert">---</p>
+                        <p class="eyeCatch__bigFont">---</p>
+                    </div>
+                </div>
+                <p class="eyeCatch__attention">---</p>
+            </div>
+
+            <p class="conect">---</p>
+
+            <div class="sobig">
+                <h3 class="sobig__til">---<span class="span__Text">---</span></h3>
+                <div class="sobig__subtil">
+                    <div class="sobig__blank"></div>
+                    <div class="sobig__yellow"><p>---</p></div>
+                    <div class="sobig__blue"><p>---</p></div>
+                </div>
+                <div class="sobig__td">
+                    <img class="sobig__img" src="./img/kanmuri.png" alt="kanmuri">
+                    <div class="sobig__blueOK"><p>---</p></div>
+                    <div class="sobig__yellowOK"><p class="ver__circle">---</p><p class="word__red">---</p></div>
+                    <div class="sobig__skyOK"><p class="ver__subtle">---</p><p class="word__black">---</p></div>
+                </div>
+                <div class="sobig__td">
+                    <img class="sobig__img" src="./img/kanmuri.png" alt="kanmuri">
+                    <div class="sobig__thinblue"><p>---</p></div>
+                    <div class="sobig__thinyellow"><p class="ver__circle">○</p><p class="word__red">---</p></div>
+                    <div class="sobig__aqua"><p class="ver__subtle">---</p><p class="word__black">---</p></div>
+                </div>
+                <div class="sobig__td">
+                    <img class="sobig__img" src="./img/kanmuri.png" alt="kanmuri">
+                    <div class="sobig__blueOK"><p>---</p></div>
+                    <div class="sobig__yellowOK"><p class="ver__circle">---</p><p class="word__red">---</p></div>
+                    <div class="sobig__skyOK"><p class="ver__subtle">---</p><p class="word__black">---</p></div>
+                </div>
+                <div class="sobig__td">
+                    <img class="sobig__img" src="./img/kanmuri.png" alt="kanmuri">
+                    <div class="sobig__thinblue"><p>---</p></div>
+                    <div class="sobig__thinyellow"><p class="ver__circle">---</p><p class="word__red">---</p></div>
+                    <div class="sobig__aqua"><p class="ver__subtle">---</p><p class="word__black">---</p></div>
+                </div>
+            </div>
+
+            <div class="reco">
+                <h3 class="reco__til">---<span>---</span>---</h3>
+                <div class="reco__merit">
+                    <div class="merit__green">
+                        <div class="merit__img"><img src="./img/tenshi_no_osatsu.png" alt="tenshi_no_osatsu"></div>
+                        <div class="merit__greenBox"><p>---</p></div>
+                        <div class="merit__arrow"></div>
+                        <div class="merit__set"><p>---</p></div>
+                    </div>
+                    <div class="merit__pink">
+                        <div class="merit__img"><img src="./img/osatsu_no_kamisama.png" alt="osatsu_no_kamisama"></div>
+                        <div class="merit__pinkBox"><p>---</p></div>
+                        <div class="merit__arrow"></div>
+                        <div class="merit__set"><p>---</p></div>
+                    </div>
+                    <div class="merit__vio">
+                        <div class="merit__img"><img src="./img/bunbun_bunbun.png" alt="bunbun_bunbun"></div>
+                        <div class="merit__vioBox"><p>---</p></div>
+                        <div class="merit__arrow"></div>
+                        <div class="merit__set"><p>---</p></div>
+                    </div>
+                </div>
+                <div class="reco__planBox">
+                    <button class="reco__planBtn">---</button>
+                </div>
+            </div>
+
+            <!--（mainvisualと同じものを流用してくる） -->
+            <!-- メインヴィジュアル 問い合わせフォーム -->
+            <div class="main__inq">
+                <div class="main__imm">
+                    <div class="main__contactBox">
+                        <img class="main__imgHuman" src="./img/main_inq_human.png" alt="main_inq_human">
+                        <div class="main__immBox">
+                            <img class="main__imgMessage--one" src="./img/main_inq_pone.png" alt="main_inq_pone">
+                            <img class="main__imgMessage--two" src="./img/main_inq_ptwo.png" alt="main_inq_ptwo">
+                        </div>
+                    </div>
+                </div>
+                <div class="main__bt">
+                    <div class="main__btmail">
+                        <button><img src="./img/envelope.png" alt="envelope"></button>
+                        <p>---</p>
+                    </div>
+                    <div class="main__bttel">
+                        <button><img src="./img/phone.png" alt="phone"></button>
+                        <p>---</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="selethree">
+            <!-- タイトル -->
+            <div class="selethree__til">
+                <img src="./img/sele_til.png" alt="sele_til">
+                <h1><span class="selethree__spBr"><span class="selethree__redLine">---</span>・<span class="selethree__redLine">---</span>・</span><span class="selethree__redLine">---</span>---</h1>
+            </div>
+
+            <!-- メッセージ -->
+            <h2 class="selethree__messe">---</h2>
+
+            <div class="suzukione">
+                <!-- タイトル -->
+                <div class="suzukione__mon">
+                    <div class="mon__back">
+                        <img src="./img/sele_clippath.png" alt="sele_clippath">
+                    </div>
+                    <div class="mon__subtil">
+                        <img class="mon__tilMesse" src="./img/sele_eight.png" alt="sele_eight">
+                        <img class="mon__tilStar" src="./img/sele_kira.png" alt="sele_kira">
+                    </div>
+                </div>
+                <!-- トピックス -->
+                <div class="suzukione__sec">
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---</h6><span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="suzukione">
+                <!-- トピックス -->
+                <!-- suzukioneと同じなので、classを引用する -->
+                <div class="suzukione__mon">
+                    <div class="mon__back">
+                        <img src="./img/sele_clippath.png" alt="sele_clippath">
+                    </div>
+                    <div class="mon__subtil">
+                        <img class="mon__tilMesse--A" src="./img/sele_one.png" alt="sele_one">
+                        <img class="mon__tilStar" src="./img/sele_kira.png" alt="sele_kira">
+                    </div>
+                </div>
+                <div class="suzukione__sec">
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="suzukione">
+                <!-- タイトル -->
+                <div class="suzukione__mon">
+                    <div class="mon__back">
+                        <img src="./img/sele_clippath.png" alt="sele_clippath">
+                    </div>
+                    <div class="mon__subtil">
+                        <img class="mon__tilMesse--B" src="./img/tukidukikomikomi.png" alt="tukidukikomikomi">
+                        <img class="mon__tilStar" src="./img/sele_kira.png" alt="sele_kira">
+                    </div>
+                </div>
+                </div>
+                <!-- トピックス -->
+                <div class="suzukione__sec">
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car suzukione__car--mr">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="suzukione__car">
+                        <div class="suzukione__tps">
+                            <div class="suzukione__carBox">
+                                <img src="./img/tanto_01.png" alt="tanto_01">
+                            </div>
+                            <div class="tps__det">
+                                <h5>---</h5>
+                                <h3>---</h3>
+                                <div class="tps__price">
+                                    <h6>---<span>---</span></h6>
+                                    <p>---<span>---</span></p>
+                                </div>
+                                <div class="tps__planBox">
+                                    <button class="tps__planBtn">---</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+
+            <div class="main__inq">
+                <div class="main__imm">
+                    <div class="main__contactBox">
+                        <img class="main__imgHuman" src="./img/main_inq_human.png" alt="main_inq_human">
+                        <div class="main__immBox">
+                            <img class="main__imgMessage--one" src="./img/main_inq_pone.png" alt="main_inq_pone">
+                            <img class="main__imgMessage--two" src="./img/main_inq_ptwo.png" alt="main_inq_ptwo">
+                        </div>
+                    </div>
+                </div>
+                <div class="main__bt">
+                    <div class="main__btmail">
+                        <button><img src="./img/envelope.png" alt="envelope"></button>
+                        <p>---</p>
+                    </div>
+                    <div class="main__bttel">
+                        <button><img src="./img/phone.png" alt="phone"></button>
+                        <p>---</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seleafter">
+            <!-- タイトル -->
+            <div class="seleafter__til">
+                <img src="./img/sele_til.png" alt="sele_til">
+                <h1>---<span class="seleafter__redLine">---</span>！</h1>
+            </div>
+
+            <h2 class="seleafter__sub"><span>---</span>---</h2>
+
+            <!-- サービス -->
+            <div class="seleafter__mainte">
+                <img class="seleafter__mentePicture" src="./img/seleafter_mainte.png" alt="seleafter__mainte">
+                <div class="mainte__cont">
+                    <div class="mainte__blue">
+                        <img class="mainte__sevenYearBlue" src="./common/img/plan_aqua_one.png" alt="plan_aqua_one">
+                        <img class="mainte__syaken" src="./common/img/plan_aqua_two.png" alt="plan_aqua_two">
+                    </div>
+                    <div class="mainte__green">
+                        <img class="mainte__sevenYearGreen" src="./common/img/plan_green_one.png" alt="plan_green_one">
+                        <img class="mainte__oil" src="./common/img/plan_green_two.png" alt="plan_green_two">
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="seleafter__ent">---</h3>
+
+            <h4 class="seleafter__so">---</h4>
+
+            <div class="seleafter__guara">
+                <h2 class="seleafter__makerWa">---</h2>
+                <div class="main__contactBox">
+                    <div class="guara__year">
+                        <img class="guara__doumae" src="./img/doumae_sp.png" alt="doumae_sp">
+                        <img class="guara__fiveYear" src="./img/max_five_year.png" alt="max_five_year">
+                        <img class="guara__masuyama" src="./img/masuyama_sp.png" alt="masuyama_sp">
+                    </div>
+                </div>
+                <h2 class="seleafter__amp">---</h2>
+                <div class="guara__det">
+                    <p>---</p>
+                    <p>---<span>---</span>---</p>
+                </div>
+
+            <div class="seleafter__ser">
+                <h3 class="seleafter__subTil"><span>---</span>---<span>---</span>-<span>--</span>-<span class="seleafter__nextRow">-</span></h3>
+                <div class="ser__feat">
+                    <div class="feat__tps">
+                        <img src="./img/store_one.png" alt="store_one">
+                        <h3>-</h3>
+                    </div>
+                    <div class="feat__tps">
+                        <img src="./img/store_two.png" alt="store_two">
+                        <h3>-</h3>
+                    </div>
+                    <div class="feat__tps">
+                        <img src="./img/store_three.png" alt="store_three">
+                        <h3>-</h3>
+                    </div>
+                    <div class="feat__tps">
+                        <img src="./img/store_four.png" alt="store_four">
+                        <h3>-</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="delivery">
+                <h3>-</h3>
+                <ul class="delivery__img">
+                    <li class="delivery__item--A"><img src="./img/car_deli.png" alt=""></li>
+                    <li class="delivery__item--B"><img src="./img/car_deli.png" alt=""></li>
+                    <li class="delivery__item--C"><img src="./img/car_deli.png" alt=""></li>
+                    <li class="delivery__item--D"><img src="./img/car_deli.png" alt=""></li>
+                    <li class="delivery__item--E"><img src="./img/car_deli.png" alt=""></li>
+                    <li class="delivery__item--F"><img src="./img/car_deli.png" alt=""></li>
+                    <li class="delivery__item--G"><img src="./img/car_deli.png" alt=""></li>
+                    <li class="delivery__item--H"><img src="./img/car_deli.png" alt=""></li>
+                    <li class="delivery__item--I delivery__item--res"><img src="./img/car_deli.png" alt=""></li>
+                </ul>
+                <div class="reco__planBox">
+                    <button class="reco__planBtn">-</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="buyflow">
+            <h1 class="buyflow__til">-</h1>
+            <div class="buyflow__proce">
+                <div class="buyflow__box">
+                    <!-- 疑似要素で番号付けるのを忘れずに -->
+                    <h2 class="buyflow__numberOne">-</h2>
+                    <div class="buyflow__text">
+                        <p class="buyflow__pRes">-</p>
+                        <p class="buyflow__pRes">-</p>
+                        <p>-</p>
+                    </div>
+                    <!-- 下矢印 -->
+                    <div class="buyflow__arrow"></div>
+                </div>
+                <div class="buyflow__box">
+                    <h2 class="buyflow__numberTwo">-</h2>
+                    <div class="buyflow__text">
+                        <p class="buyflow__pRes">-</p>
+                        <p class="buyflow__pRes">-</p>
+                        <p>-</p>
+                    </div>
+                    <div class="buyflow__arrow"></div>
+                </div>
+                <div class="buyflow__box">
+                    <h2 class="buyflow__numberThree">-</h2>
+                    <div class="buyflow__text">
+                        <p class="buyflow__pRes">-</p>
+                        <p class="buyflow__pRes">-</p>
+                        <p>-</p>
+                    </div> 
+                </div>
+            </div>
+        </section>
+
+        <section class="que">
+            <h1 class="que__til">-</h1>
+            <div class="que__box">
+                <div class="que__q">
+                    <img src="./common/img/que_q.png" alt="que_q">
+                    <p>-</p>
+                </div>
+                <div class="que__a">
+                    <img src="./common/img/que_a.png" alt="que_a">
+                    <p>-<span>-</span>---<span>-</span></p>
+                </div>
+            </div>
+            <div class="que__box">
+                <div class="que__q">
+                    <img src="./common/img/que_q.png" alt="que_q">
+                    <p>-</p>
+                </div>
+                <div class="que__a">
+                    <img src="./common/img/que_a.png" alt="que_a">
+                    <p>-<span>-</span>-<span>-</span></p>
+                </div>
+            </div>
+            <div class="que__box">
+                <div class="que__q">
+                    <img src="./common/img/que_q.png" alt="que_q">
+                    <p class="que__p">-</p>
+                </div>
+                <div class="que__a">
+                    <img src="./common/img/que_a.png" alt="que_a">
+                    <p>-<span>-</span>---</p>
+                </div>
+            </div>
+
+            <div class="main__inq">
+                <div class="main__imm">
+                    <div class="main__contactBox">
+                        <img class="main__imgHuman" src="./img/takamatsu_two.png" alt="takamatsu_two">
+                        <div class="main__immBox">
+                            <img class="main__imgMessage--one " src="./img/main_inq_pone.png" alt="main_inq_pone">
+                            <img class="main__imgMessage--two" src="./img/main_inq_ptwo.png" alt="main_inq_ptwo">
+                        </div>
+                    </div>
+                </div>
+                <div class="que__bt">
+                    <div class="que__bttel">
+                        <button class="que__button"><img src="./img/phone.png" alt="phone">
+                        <p>---</p></button>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="form__til">---</h2>
+
+            <div class="form__subTil">
+                <p>---
+                    <span class="form__spanOne">-</span>
+                    <span class="form__spanTwo">-</span></p>
+            </div>
+
+            <div class="form">
+                <form action="#">
+                    <div class="form__name">
+                        <label for="name">-</label>
+                        <input type="text" id="name" placeholder="山田太郎">
+                    </div>
+                    <div class="form__name">
+                        <label for="furigana">-</label>
+                        <input type="text" id="furigana" placeholder="ヤマダタロウ">
+                    </div>
+                    <div class="form__tel">
+                        <label for="tel">-</label>
+                        <input type="text" id="furigana" placeholder="携帯可">
+                    </div>
+                    <div class="form__mail">
+                        <label for="mail">-</label>
+                        <input type="email" id="mail" placeholder="example@yamada.com">
+                    </div>
+                    <div class="form__loan">
+                        <h3>-</h3>
+                        <input type="checkbox" id="loan"><label for="loan">-</label>
+                    </div>
+                    <div class="form__car">
+                        <label for="car">---</label>
+                        <input type="text" id="car" placeholder="気になるものを入力してください">
+                    </div>
+                    <div class="form__contact">
+                        <label for="contact">---</label>
+                        <textarea name="message__box" id="contact" placeholder="ご入力ください"></textarea>
+                    </div>
+                    <div class="form__policy">
+                        <input type="checkbox" id="policy"><label for="policy"><a href="">プライバシーポリシー</a><img src="./common/img/policy_block.png" alt="policy_block">に同意します。</label>
+                    </div>
+                    <div class="form__planBox">
+                        <button class="form__planBtn">入力内容を確認する</button>
+                    </div>
+                </form>
+                <div class="form__attention">
+                    <p>-
+                        <span class="form__attention--sent">お電話のみ</span>とさせて頂いております。
+                        <span class="form__attention--newLine">-の番号よりご連絡を差し上げますので、応対頂きますようお願い致します。</span></p>
+                </div>
+            </div>
+        </section>
+
+        <section class="store">
+            <h1 class="store__til">-</h1>
+            <div class="store__info">
+                <div>
+                    <div class="store__jump">
+                        <h2>-</h2>
+                        <a href="">-></a>
+                    </div>
+                    <div class="store__line"></div>
+                    <div class="store__box">
+                        <ul class="store__detTil">
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item--last">-</li>
+                        </ul>
+                        <ul class="store__detSent">
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item--last">-</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Google Map API連携 -->
+                <div class="googleMap">
+                    <iframe src=></iframe>
+                </div>
+
+                <div class="reco__planBox store__btnPc">
+                    <button class="reco__planBtn">-</button>
+                </div>
+                <div class="store__pd"></div>
+            </div>
+
+            <div class="store__info">
+                <div>
+                    <div class="store__jump">
+                        <h2>-</h2>
+                        <!-- 疑似要素で右矢印 -->
+                        <a href="">-></a>
+                    </div>
+                    <!-- 白い線 -->
+                    <div class="store__line"></div>
+                    <div class="store__box">
+                        <ul class="store__detTil">
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__itemç">-</li>
+                        </ul>
+                        <ul class="store__detSent">
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item">-</li>
+                            <li class="store__item--last">-</li>
+                        </ul>
+                    </div> 
+                </div>
+
+                <!-- Google Map API連携 -->
+                <div class="googleMap">
+                    <iframe src=></iframe>
+                </div>
+                 
+                <div class="reco__planBox store__btnPc">
+                    <button class="reco__planBtn">-</button>
+                </div>
+                <div class="store__pd"></div>
+            </div>
+        </section>
+        <div class="connne__backYellowPc">
+            <div class="connne">
+                <h2>-</h2>
+                <ul class="connne__list">
+                    <li class="connne__item"><div class="connne__itemBox--A"><img src="./common/img/yoshi.png" alt="yoshi"></div></li>
+                    <li class="connne__item"><div class="connne__itemBox--B"><img src="./common/img/car_site.png" alt="car_site"></div></li>
+                    <li class="connne__item"><div class="connne__itemBox--C"><img src="./common/img/keinomori.png" alt="keinomori"></div></li>
+                    <li class="connne__item"><div class="connne__itemBox--D"><img src="./common/img/keipark.png" alt="keipark"></div></li>
+                    <li class="connne__item"><div class="connne__itemBox--E"><img src="./common/img/sensyakingdom.png" alt="sensyakingdom"></div></li>
+                    <li class="connne__item"><div class="connne__itemBox--F"><img src="./common/img/mahha.png" alt="mahha"></div></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="underNav">
+            <ul class="underNav__menu">
+                <li class="underNav__item--A"><img src="./common/img/phoneUnder.png" alt="phoneUnder">-</li>
+                <li class="underNav__item--B"><img src="./common/img/mailUnder.png" alt="mailUnder">-</li>
+                <li class="underNav__item--C"><a href="./access/index.html"><img src="./common/img/accessUnder.png" alt="accessUnder">-</a></li>
+                <li class="underNav__item--D"><a href="#top"><img src="./common/img/upperUnder.png" alt="upperUnder">-</a></li>
+            </ul>
+        </div>
+    </main>     
+
+    <!-- フッター -->
+    <footer class="foot">
+        <div class="foot__box">
+            <div class="foot__flexBox">
+                <div class="foot__miniBox--A">
+                    <ul class="foot__main">
+                        <li class="foot__mr"><a href="index.html">-</a></li>
+                        <li class="foot__mr"><a href="./plan/index.html">-</a></li>
+                        <li class="foot__mr"><a href="./question/index.html">-</a></li>
+                    </ul>
+                    <div class="foot__contact">
+                        <a href="">---</a>
+                    </div>
+                </div>
+                <div class="foot__miniBox--B">
+                    <ul class="foot__carplan">
+                        <li class="foot__mr"><a href="">-</a></li>
+                        <li class="foot__mr"><a href="">-</a></li>
+                        <li class="foot__mr"><a href="">-</a></li>
+                        <li><a href="">-</a></li>
+                    </ul>
+                    <ul class="foot__access">
+                        <li class="foot__mr"><a href="">-</a></li>
+                        <li><a href="">-</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- コピーライト -->
+            <div class="foot__cr">
+                <p>-</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Vueの読み込み(ver2系) -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data(){
+                return {
+                     isShow: false
+                }
+            },
+            methods: {
+                hamburgerToggle() {
+                    // if(this.isShow = false) {
+                    //     this.isShow = true
+                    //     console.log('反応してるぅ！？')
+                    // }
+                    //this.isShow = true
+                    if(this.isShow === false) {
+                        this.isShow = true;
+                        console.log('if文上手く言ってる？');
+                    } else if(this.isShow === true) {
+                        this.isShow = false;
+                        console.log('else文上手く言ってる？');
+                    }
+                    console.log('ボタン反応してる？')
+                }
+            },
+        })
+    </script>
+    <style>
+        /* ナビゲーションメニューのアニメーション */
+        @keyframes slide {
+        0% {
+            transform: translateX(280px);
+        }
+        100% {
+            transform: translateX(0px);
+        }
+        }
+        @keyframes outSlide {
+        0% {
+            transform: translateX(0px);
+        }
+        100% {
+            transform: translateX(280px);
+        }
+        }
+
+        .v-enter-active, .v-leave-active {
+            animation-name: slide;
+            animation-duration: .5s;
+            animation-timing-function: ease;
+        }
+        .v-enter-from, .v-leave-to {
+            animation-name: outSlide;
+            animation-duration: .5s;
+            animation-timing-function: ease;
+        }
+
+        /* 読み込み時に非表示の仮想DOMを表示されないようにする */
+        [v-cloak] {
+            display: none;
+        }
+
+        /* ハンバーガーメニューボタンのアニメーション */
+        .active__lineA{
+            top: 10px !important;
+            transform: rotate(45deg);
+        }
+        .active__lineB {
+            opacity: 0;
+        }
+        .active__lineC {
+            top: 10px !important;
+            transform: rotate(-45deg);
+        }
+    </style>
+</body>
+</html>

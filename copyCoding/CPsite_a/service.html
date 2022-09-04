@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <!-- 文字列、IE対策、レスポンシブ対応 -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- OGP -->
+    <meta property="og:url" content="" />
+	<meta property="og:type" content="" />
+	<meta property="og:title" content="" />
+	<meta property="og:description" content="" />
+	<meta property="og:site_name" content="" />
+	<meta property="og:image" content="" />
+
+    <!-- サイト名 -->
+    <title>---</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+</head>
+<body>
+    <!-- ヘッダー、ナビゲーションメニュー -->
+    <div class="head__fixed">
+        <div class="head__line">
+            <header class="head content">
+                <div id="js__hamburger" class="head__hamburger">
+                    <span class="head__inner line__one" id="head__line--one"></span>
+                    <span class="head__inner line__two" id="head__line--two"></span>
+                    <span class="head__inner line__three" id="head__line--three"></span>
+                </div>
+                <h1 class="head__img"><a href="./index.html"><img src="./img/logo.png" alt=""></a></h1>
+                <nav id="head__list">
+                    <ul class="head__nav">
+                        <li class="head__item"><a href="./about.html">---</a></li>
+                        <li class="head__item"><a class="head__item--red" href="./service.html">---</a></li>
+                        <li class="head__item"><a href="./blog.html">---</a></li>
+                        <li><a href="./access.html">---</a></li>
+                    </ul>
+                    <div class="head__snsdis">
+                        <ul class="head__sns">
+                            <li><img src="./img/icon_tw.png" alt="icon_tw.png"></li>
+                            <li><img src="./img/icon_fb.png" alt="icon_fb.png"></li>
+                            <li><img src="./img/icon_yt.png" alt="icon_yt.png"></li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+    <main class="main__fixed">
+        <!-- 屋台一覧 -->
+        <div class="content">
+            <section class="sertop__res">
+                <!-- ブログとかにあるどのページに推移しているか分かるあれ -->
+                <div class="category">
+                    <p><a href="./index.html">---</a>---</p>
+                </div>
+                <!-- 屋台一覧の帯と写真 -->
+                <div class="abtop__visual">
+                    <img src="./img/service_fv.png" alt="service_fv">
+                    <h1 class="abtop__ab">---</h1>
+                </div>
+                <!-- 詳細 -->
+                <div class="sertop__sent">
+                    <p class="sertop__sent--one">---</p>
+                    <p class="sertop__sent--two">---</p>
+                </div>
+            </section>
+        </div>
+
+        <!-- アイキャッチ -->
+        <img class="sereye" src="./img/service_eye-catching.jpeg" alt="service_eye-catching">
+
+        <!-- 屋台詳細 -->
+        <div class="serdet__master">
+            <!-- スライドショーの矢印 positionプロパティで親要素のwidthを無視しよう！ -->
+            <span></span>
+            <span></span>
+            <section class="content">
+                <!-- 写真と詳細　JSの矢印で移動できるスライドショー -->
+                <div class="serdet">
+                    <div id="serdet__arrow">
+                        <span id="serdet__right"></span>
+                        <span id="serdet__left"></span>
+                    </div>
+                    <!-- その1 -->
+                    <div class="serdet__close serdet__open">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-01.jpeg" alt="service_item-01">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---</h3>
+                                <h3 class="serdet__pri">---</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- その2 -->
+                    <div class="serdet__close">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-02.jpeg" alt="service_item-02">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---<br></h3>
+                                <h3 class="serdet__pri">---</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- その3 -->
+                    <div class="serdet__close">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-03.jpeg" alt="service_item-03">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---</h3>
+                                <h3 class="serdet__pri">---</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- その4 -->
+                    <div class="serdet__close">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-04.jpeg" alt="service_item-04">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---<br></h3>
+                                <h3 class="serdet__pri">---</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- その5 -->
+                    <div class="serdet__close">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-05.jpeg" alt="service_item-05">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---</h3>
+                                <h3 class="serdet__pri">---</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- その6 -->
+                    <div class="serdet__close">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-06.jpeg" alt="service_item-06">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---<br></h3>
+                                <h3 class="serdet__pri">一回 100円</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- その7 -->
+                    <div class="serdet__close">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-07.jpeg" alt="service_item-07">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---</h3>
+                                <h3 class="serdet__pri">---</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- その8 -->
+                    <div class="serdet__close">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-08.jpeg" alt="service_item-08">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---<br></h3>
+                                <h3 class="serdet__pri">---</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- その9 -->
+                    <div class="serdet__close">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-09.jpeg" alt="service_item-09">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---<br></h3>
+                                <h3 class="serdet__pri">---</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- その10 -->
+                    <div class="serdet__close">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-10.jpeg" alt="service_item-10">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---</h3>
+                                <h3 class="serdet__pri">---</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- その11 -->
+                    <div class="serdet__close">
+                        <div class="serdet__choise">
+                            <img src="./img/service_item-11.jpeg" alt="service_item-11">
+                            <div class="serdet__sent">
+                                <h3 class="serdet__til">---<br></h3>
+                                <h3 class="serdet__pri">---</h3>
+                                <p>---</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 屋台斜め画像部分 -->
+                <div class="serimg__master">
+                    <!-- 画像上段 -->
+                    <div class="serimg__box--up">
+                        <!--  その1 -->
+                        <div>
+                            <img class="serimg__pic" src="./img/service_item-01.jpeg" alt="service_item-01">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                        <!--  その2 -->
+                        <div class="serimg__poup">
+                            <img class="serimg__pic" src="./img/service_item-02.jpeg" alt="service_item-02">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                        <!--  その3 -->
+                        <div class="serimg__poup serimg__poup--one">
+                            <img class="serimg__pic" src="./img/service_item-03.jpeg" alt="service_item-03">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                        <!--  その4 -->
+                        <div class="serimg__poup serimg__poup--two">
+                            <img class="serimg__pic" src="./img/service_item-04.jpeg" alt="service_item-04">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                        <!--  その5 -->
+                        <div class="serimg__poup serimg__poup--three">
+                            <img class="serimg__pic" src="./img/service_item-05.jpeg" alt="service_item-05">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                        <!--  その6 -->
+                        <div class="serimg__poup serimg__poup--four">
+                            <img class="serimg__pic" src="./img/service_item-06.jpeg" alt="service_item-06">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                    </div>
+                    <!-- 画像下段 -->
+                    <div class="serimg__box--down">
+                        <!--  その7 -->
+                        <div>
+                            <img class="serimg__pic" src="./img/service_item-07.jpeg" alt="service_item-07">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                        <!--  その8 -->
+                        <div class="serimg__podown">
+                            <img class="serimg__pic" src="./img/service_item-08.jpeg" alt="service_item-08">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                        <!--  その9 -->
+                        <div class="serimg__podown serimg__podown--one">
+                            <img class="serimg__pic" src="./img/service_item-09.jpeg" alt="service_item-09">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                        <!--  その10 -->
+                        <div class="serimg__podown serimg__podown--two">
+                            <img class="serimg__pic" src="./img/service_item-10.jpeg" alt="service_item-10">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                        <!--  その11 -->
+                        <div class="serimg__podown serimg__podown--three">
+                            <img class="serimg__pic" src="./img/service_item-11.jpeg" alt="service_item-11">
+                            <h6 class="serimg__til">---</h6>
+                            <h5 class="serimg__subt">---</h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- フッター -->
+    <div class="foot__line">
+        <footer class="foot content">
+            <!-- プライバシーポリシーetc. -->
+            <ul class="foot__list">
+                <li class="foot__item foot__item--mgr"><a href="#"></a>---</li>
+                <li class="foot__item"><a href="#"></a>---</li>
+                <li class="foot__item foot__item--mgl"><a href="#"></a>---</li>
+            </ul>
+            <!-- コピーライト -->
+            <div class="foot__cr">
+                <p>&copy; 2021 ---</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript jQueryとslickライブラリファイル読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./slick.min.js"></script>
+    <!-- JavaScriptファイル読み込み -->
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+.head {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 65px;
+  padding-bottom: 65px;
+  background-color: #1558A0;
+}
+.head__logo {
+  position: relative;
+  top: 0;
+  left: 15px;
+  width: 120px;
+  height: 35px;
+  margin: 15px 0 15px 0;
+}
+.head__bigBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+.head__itemPC {
+  display: none;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 65px;
+  color: #FFFFFF;
+}
+.head__itemPC li {
+  cursor: pointer;
+}
+.head__btnYellow {
+  width: 125px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  border-radius: 4px;
+  position: relative;
+  top: 15px;
+  background-color: #FFE941;
+  color: #1558A0;
+}
+
+main {
+  padding-top: 65px;
+}
+
+@media screen and (min-width: 769px) {
+  .head__logo {
+    left: 35px;
+  }
+  .head__itemPC {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-right: 35px;
+  }
+  .head__itemPC li {
+    margin-left: 10px;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .head__logo {
+    left: 140px;
+  }
+  .head__itemPC {
+    padding-right: 140px;
+  }
+  .head__itemPC li {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .head__itemPC li {
+    margin-left: 50px;
+  }
+}
+/*# sourceMappingURL=style.css.map */

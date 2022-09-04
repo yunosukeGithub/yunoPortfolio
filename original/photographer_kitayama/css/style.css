@@ -1,0 +1,473 @@
+@charset "UTF-8";
+
+/*共通部分*/
+html{
+    font-size: 100%;
+    overflow-y: scroll;
+}
+body{
+    font-family: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+a{
+    text-decoration: none;
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color: black;
+}
+img{
+    max-width: 100%;
+}
+svg{
+    width: 25px;
+    height: 25px;
+}
+#main-content{
+    width: 75%;
+    margin: 0 auto;
+}
+.sec-title{
+    text-align: center;
+    margin-top: 85px;
+}
+/* 非表示 */
+.hfjj{
+    display: none;
+}
+/* ローディング画面をフェードアウト */
+.fadeout-lg{
+    transition-property: opacity;
+    transition-delay: .9s;
+    transition-duration: .8s;
+    opacity: 0;
+    pointer-events: none;
+}
+/* ローダーをフェードアウト */
+.fadeout-loader{
+    transition-property: opacity;
+    transition-delay: .9s;
+    transition-duration: .3s;
+    opacity: 0;
+    pointer-events: none;
+}
+/* ローディング画面 */
+#lorder-bg{
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+}
+#lorder{
+    height: 120px;
+    width: 120px;
+    left: 50%;
+    margin-left: -60px;
+    margin-top: -60px;
+    position: fixed;
+    top: 50%;
+}
+#lorder p{
+    color: #454545;
+    font-size: 10px;
+    line-height: 1.4;
+    text-align: center;
+}
+#lorder p img{
+    display: inline-block;
+}
+
+/* ヘッダー */
+#header-content{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    width: 194px;
+    margin-top: 4px;
+}
+
+.nav-menu{
+    width: 525px;
+    margin: auto 0;
+}
+.ul-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.sns-menu{
+    width: 140px;
+    display: flex;
+    margin: auto 0;
+    justify-content: space-between;
+}
+.ul-list-sns{
+    display: none;
+}
+.res-menu{
+    display: none;
+}
+.nav-toggle{
+    display: none;
+}
+.ul-list a{
+    position: relative;
+}
+.ul-list a::after{
+    position: absolute;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: black;
+    bottom: -3px;
+    transform: scale(0,1); /* スケールの値は要素の指定した値に依存する。例えばy軸側であれば、現在height2pxで指定しているので、"2"と指定すると、2倍になる */
+    transform-origin: left top;
+    transition: transform 0.3s;
+}
+a:hover::after{
+    transform: scale(1,1);
+}
+
+/* フッター */
+#footer-content{
+    width: 85%;
+    margin: 0 auto;
+    display: flex;
+}
+.copy-write{
+    font-size: 0.75rem;
+}
+.footer-absolute{
+    position: absolute;
+    bottom: 0;
+}
+
+/* トップページ */
+.slick-list img{
+    width: 100%;
+    max-height: 93.8vh;
+    object-fit: cover;
+}
+#main-visual{
+    list-style: none;
+}
+/* ギャラリーページ */
+#gallery-content{
+    width: 95%;
+    margin: 0 auto;
+}
+.item1-grid{
+    display: grid;
+    gap: 26px;
+    grid-template-columns: repeat(3, minmax(240px, 1fr));
+}
+.item2-grid{
+    display: flex;
+    justify-content: space-between;
+    gap: 26px;
+    margin-top: 26px;
+}
+/* アバウトページ */
+.text-content{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+.name-tag{
+    margin-top: 100px;
+}
+
+/* ワークスページ */
+.works-content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+.works-content div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 100px;
+}
+
+/* ショップページ */
+.shop-content{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+.shop-content img{
+    width: 300px;
+}
+.shop-details{
+    padding-left: 150px;
+}
+.shop-details h3{
+    text-align: center;
+}
+.shop-details p, 
+.shop-details button{
+    margin-top: 75px;
+}
+.shop-details button{
+    color: white;
+    width: 140px;
+    height: 36px;
+    background-color: #5ca6e2;
+}
+.shop-details button:hover{
+    color: white;
+    background-color: #8fbde4;
+}
+
+
+/* コンタクトページ */
+.contact-details{
+    margin-top: 100px;
+    text-align: center;
+}
+.form-tag{
+    width: 45%;
+    margin: 0 auto;
+}
+.name-tagc input,
+.mail-tag input, 
+.message-tag textarea{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.message-tag textarea{
+    padding: 10px;
+}
+.form-tag #namae, 
+.form-tag #mail-box, 
+.form-tag #message-tag{
+    border: solid 1px black;
+}
+.submit-button input{
+    color: white;
+    width: 140px;
+    height: 36px;
+    background-color: #5ca6e2;
+}
+.submit-button input:hover{
+    color: white;
+    background-color: #8fbde4;
+}
+
+/* モバイル版 */
+@media (max-width: 600px){
+    #lorder p img{
+        width: 30%;
+    }
+    img{
+        width: 100%;
+    }
+    .slick-list img{
+        width: 100%;
+        height: 91.3vh;
+        object-fit: cover;
+    }
+    .sns-menu{
+        display: none;
+    }
+    .nav-menu{
+        display: none;
+        position: fixed; /* 親要素にpositionを入れることで、親要素を基準としたfixedを適用することができる。 */
+        left: 0; /* 親要素のwidthを無視して画面全体を覆い隠す */
+        background: rgba(255, 255, 255, 0.7);
+        width: 100%;
+        height: 93%;
+        bottom: 0;
+        z-index: 1;
+    }
+    .ul-list{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+    }
+    .ul-list-sns{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+    .list-item{
+        margin-bottom: 30px;
+    }
+    .list-item a{
+        color: black;
+        font-size: 30px;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    .list-item-sns a{
+        color: black;
+        font-size: 15px;
+        text-decoration: none;
+        transition: 0.5s;
+    }
+    .list-item a:hover{
+        opacity: 0.7;
+    }
+    .list-item-sns a:hover{
+        opacity: 0.7;
+    }
+
+    /* ヘッダーコンテンツ */
+   
+
+    /* ハンバーガーメニュー */
+    .nav-toggle{
+        display: block;
+        margin: auto 0;
+        position: relative;
+        width: 1.75rem;
+        height: 1.5rem;
+    }
+    .nav-toggle i{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: black;
+        position: absolute;
+        transition: transform .5s, opacity .5s;
+    }
+    .nav-toggle i:nth-child(1){
+        top: 0;
+    }
+    .nav-toggle i:nth-child(2){
+        top: 0;
+        bottom: 0;
+        margin: auto;
+    }
+    .nav-toggle i:nth-child(3){
+        bottom: 0;
+    }
+    .nav-toggle.show i:nth-child(1){
+        transform: translateY(10px) rotate(-45deg);
+    }
+    .nav-toggle.show i:nth-child(2){
+        opacity: 0;
+    }
+    .nav-toggle.show i:nth-child(3){
+        transform: translateY(-12px) rotate(45deg);
+    }
+    .ul-list a::after{
+        display: none;
+    }
+    a:hover::after{
+       display: none;
+    }
+    /* フッター */
+    .footer-absolute{
+        position: relative;
+        bottom: 0;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+    .footer-absolute-gallery{
+        position: relative;
+        bottom: 0;
+        margin: 0 auto;
+    }
+
+    /* アバウトページ */
+    .text-content{
+        display: inline-block;
+        flex-flow: column;
+    }
+    .text-japanese{
+        margin-bottom: 20px;
+    }
+    .text-english{
+        margin-bottom: 20px;
+    }
+    .name-tag{
+        text-align: center;
+    }
+
+    /* ギャラリーページ */
+    .item1-grid{
+        display: grid;
+        gap: 26px;
+        grid-template-columns: repeat(1, minmax(240px, 1fr));
+    }
+    .item2-grid{
+        display: grid;
+        grid-template-columns: repeat(1, minmax(240px, 1fr));
+        gap: 26px;
+        margin-top: 26px;
+    }
+
+    /* ワークページ */
+    iframe{
+        width: 100%;
+        height: 95%;
+    }
+    .works-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .works-content div{
+        width: 95%;
+        padding: 0;
+    }
+    .footer-absolute-works{
+        position: relative;
+        bottom: 0;
+        margin: 0 auto;
+        margin-top: 20px;
+    }
+
+
+    /* ショップページ */
+    .shop-content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .shop-details{
+        padding: 0;
+    }
+    .shop-details button{
+        position: relative;
+        left: 25%;
+    }
+
+    /* コンタクトページ */
+    .contact-details{
+        text-align: left;
+    }
+    .form-tag{
+        width: 100%;
+        margin-top: 70px;
+    }
+    .name-tag label{
+        text-align: left;
+    }
+    .submit-button{
+        text-align: center;
+    }
+ 
+}

@@ -1,0 +1,1991 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html{
+    font-size: 100%;
+    overflow-y: scroll;
+}
+
+body{
+    line-height: 1.7;
+    max-width: 100%;
+    color: #F4F4F4;
+    background-color: #151515;
+    font-family: 'Sawarabi Mincho';
+}
+
+h2{
+    font-weight: lighter;
+}
+
+a{
+text-decoration: none;
+}
+
+a:link{
+    color: #F4F4F4;
+}
+
+a:visited{
+    color: #F4F4F4;
+}
+
+ul{
+    list-style: none;
+}
+
+img{
+    display: block;
+    max-width: 100%;
+}
+
+.content{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.button{
+    width: 140px;
+    height: 40px;
+    margin: 60px auto 0 auto;
+    border: solid 1px #F4F4F4;
+    text-align: center;
+    font-size: 20px;
+}
+
+.button a::after {
+    content: "";
+    width: 11.21px;
+    height: 11.21px;
+    border: solid 1px transparent;
+    border-right-color: #F4F4F4;
+    border-top-color: #F4F4F4;
+    display: inline-block;
+    transform: rotate(45deg);
+    margin-bottom: 1.5px;
+}
+
+.button a{
+    line-height: 40px;
+}
+
+.button:hover{
+    background-color: #F4F4F4;
+}
+
+.button a:hover{
+    color: #343434;
+}
+
+.button a:hover:after{
+    border-right-color: #343434;
+    border-top-color: #343434;
+}
+
+.category{
+    font-size: 14px;
+    margin: 30px 0;
+}
+
+.category a{
+    text-decoration: underline;
+}
+
+.main__fixed{
+    padding-top: 70px;
+}
+
+/* ヘッダー */
+.head__line{
+    width: 99.24vw;
+    height: 70px;
+    background-color: #151515;
+    border-bottom: solid 1px #F4F4F4;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    line-height: 70px;
+    z-index: 100;
+}
+
+.head__hamburger{
+    display: none;
+}
+
+.head__nav{
+    display: flex;
+}
+
+.head__img{
+    width: 320px;
+    height: 50.67px;
+    margin-top: 9.66px;
+}
+
+.head__item{
+    margin-right: 30px;
+}
+
+.head__snsdis{
+    display: none;
+}
+
+#head__list a:hover{
+    color: #FF4343;
+}
+
+.head__item--red:visited{
+    color: #FF4343;
+}
+
+.head__fixed{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+/* slick-slide arrow 強制削除 */
+.slick-prev, .slick-next, .slick-prev:before, .slick-next:before{
+    content: none !important;
+}
+
+/* メインヴィジュアル */
+
+/* index.html */
+/* 最新情報 */
+.slider{
+    position:relative;
+	z-index: 1;
+	height: 624px;
+}
+
+.slider__item {
+    width: 100%;
+    height:624px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.slick-dots{
+    position: relative;
+}
+
+.slick-dots li {
+    position: absolute;
+    bottom: 65px;
+    margin: 0 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.slick-dots li button:before {
+    content:'';
+    font-size: 30px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    opacity: 1;
+}
+
+.slick-dots li.slick-active button:before{
+    background: #FF4343;
+}
+
+.slick-dots li button:before{
+	content: ''!important;
+	height: 80%!important;
+    width: 80%!important;
+}
+
+.slick-arrow{
+    position: absolute;
+    top: 0;
+    margin-top: -16px;
+    width: 20px;
+    height: 33px;
+    opacity:0.7;
+    z-index:10;
+}
+
+.prev-arrow{
+    left: 5px;
+}
+
+.next-arrow{
+    right: 5px;
+}
+
+.mainvisual{
+    display: none;
+}
+
+.mainvisual__open{
+    display: block;
+    z-index: -10;
+}
+
+.mainvisual__slide{
+    animation-name: fadeInAnime;
+    animation-fill-mode:forwards;
+    animation-duration:1s;
+    animation-iteration-count:1;
+    animation-timing-function:linear;
+    animation-delay: 0s;
+    animation-direction:normal;
+    z-index: -9;
+}
+
+@keyframes fadeInAnime{
+    0% {
+    opacity: 0;
+    transform: translateX(-50px);
+    }
+
+    100% {
+    opacity: 1;
+    transform: translateX(0);
+    }
+}
+
+
+.topgizi{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    position: absolute;
+    width: 112px;
+    height: 16px;
+    top: 649px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.topgizi__circle{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+}
+
+.topinfo{
+    margin-bottom: 200px;
+}
+
+.topinfo__til{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-top: 90px;
+    margin-bottom: 60px;
+}
+
+.topinfo__new::after{
+    content: "NEW";
+    display: inline-block;
+    font-size: 10px;
+    line-height: 14px;
+    background-color: #FF4343;
+    width: 34px;
+    height: 14px;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 2px;
+}
+
+.topinfo__detail{
+	margin-left: 228px;
+}
+
+.topinfo__int a{
+    display: inline-block;
+    border-bottom: solid 1px #F4F4F4;
+}
+
+.topinfo__int a:hover{
+    color: #FF4343;
+    border-bottom: solid 1px #FF4343;
+}
+
+.topinfo__int--mg{
+    margin-bottom: 16px;
+}
+
+/* わいず祭りについて */
+.topab{
+    height: 870px;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 120px;
+}
+
+.topab::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background-color: #840E0E;
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0% 100%);
+    z-index: -1;
+}
+
+.topab__det{
+    padding-top: 80px;
+}
+
+.topab__sent{
+    display: block;
+    width: 475px;
+    height: 267px;
+    font-size: 20px;
+    margin-top: 60px;
+}
+
+.topab__sent--res{
+    display: none;
+}
+
+.topab__til{
+    font-size: 32px;
+    text-align: center;
+}
+
+.topab__po{
+    position: relative;
+}
+
+.topab__pic{
+    position: relative;
+    display: flex;
+}
+
+.topab__img{
+    width: 200px;
+    height: 450px;
+}
+
+.topab__img--a{
+    position: relative;
+    z-index: 2;
+    top: 33px;
+    left: 122px;
+}
+
+.topab__img--b{
+    position: relative;
+    z-index: 1;
+    top: 79px;
+    left: 72px;
+}
+
+/* アイキャッチ */
+.topeye{
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    position: relative;
+    bottom: 100px;
+    z-index: -10;
+}
+
+.topeye__clip--one{
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 90%);
+}
+.topeye__clip--two{
+    clip-path: polygon(0 0, 100% 10%, 100% 90%, 0 100%);
+}
+
+/* 屋台一覧 */
+.sertop__po{
+    position: relative;
+}
+
+.sertop__visual--pc{
+    display: block;
+}
+
+.sertop__visual--res{
+    display: none;
+}
+
+.sertop__pic{
+    display: flex;
+    justify-content: center;
+    margin-top: 90.51px;
+}
+
+.sertop__img{
+    width: 200px;
+    height: 136px;
+}
+
+.sertop__til{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-bottom: 60px;
+}
+
+.sertop__sedet--pc{
+    display: block;
+    text-align: center;
+}
+
+.sertop__sedet--res{
+    display: none;
+}
+
+.sertop{
+    height: 713.97px;
+}
+
+.sertop::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background-color: #840E0E;
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+    z-index: -1;
+}
+
+/* ブログ */
+.topblog__po{
+    position: relative;
+}
+
+.topblog{
+    margin-bottom: 200px;
+}
+
+.topblog__til{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    margin-bottom: 60px;
+}
+
+.topblog__box{
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    height: 235px;
+    margin-bottom: 30px;
+    vertical-align: middle;
+    background-color: #D5D5D5;
+}
+
+.topblog__img{
+    width: 250px;
+    height: 175px;
+    margin: 25px 0 0 25px;
+}
+
+.topblog__sent{
+    display: block;
+    color: #000000;
+    margin: 25px 25px 0 0;
+}
+
+.topblog__sent--res{
+    display: none;
+}
+
+.topblog__sent p{
+    width: 675px;
+    height: 115px;
+    margin-top: 30px;
+    font-weight: lighter;
+    font-size: 14px;
+}
+
+.topblog__sent h3{
+    font-weight: lighter;
+    text-decoration: underline;
+}
+
+/* アクセス */
+.topacs__po{
+    position: relative;
+}
+
+.topacs{
+    height: 827px;
+}
+
+.topacs::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0;
+    right: 0;
+    background-color: #840E0E;
+    clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+    z-index: -1;
+}
+
+.topacs__til{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+    padding-top: 200px;
+}
+
+.topacs__dl{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.topacs__item{
+    margin-bottom: 30px;
+    border-bottom: solid #151515 1px;
+}
+
+.topacs__item--pc{
+    display: block;
+    margin-bottom: 30px;
+    border-bottom: solid #151515 1px;
+}
+
+.topacs__item--res{
+    display: none;
+}
+
+.topacs__sp{
+    display: inline-block;
+    width: 91px;
+    height: 30px;
+    background-color: #151515;
+    text-align: center;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 16px;
+}
+
+.top__pc{
+    display: block;
+}
+
+.top__res{
+    display: none;
+}
+
+/* フッター */
+.foot__line{
+    width: 99.24vw;
+    height: 136.5px;
+    border-top: solid 1px #F4F4F4;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.foot__list{
+    display: flex;
+    justify-content: center;
+    margin-top: 30.49px;
+}
+
+.foot__item{
+    font-family: 'Noto Sans JP';
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.foot__item--mgr{
+    margin-right: 30px;
+}
+
+.foot__item--mgl{
+    margin-left: 30px;
+}
+
+.foot__cr{
+    font-family: 'Noto Sans JP';
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 12px;
+}
+
+/* about.html */
+/* わいず祭りについて */
+.abtop__visual{
+    position: relative;
+}
+
+.abtop__ab{
+    width: 100%;
+    font-size: 32px;
+    position: absolute;
+    top: 158px;
+    text-align: center;
+    background-color: #191919;
+}
+
+.abtop__det{
+    width: 900px;
+    height: 147px;
+    margin: 0 auto;
+    margin-top: 90px;
+}
+
+.abtop__sent{
+    font-size: 20px;
+    text-align: center;
+}
+
+/* アイキャッチ */
+.abeye{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
+    margin: 200px 0;
+}
+
+/* 挨拶 */
+.absec__til{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.absec__box{
+    width: 100%;
+    height: 688px;
+    background-color: #840E0E;
+    margin-bottom: 200px;
+    border: solid #707070 2px;
+}
+
+.absec__tag{
+    display: flex;
+    background-color: #151515;
+    cursor: pointer;
+    cursor: hand;
+}
+
+.absec__button{
+    width: 500px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    border-bottom: solid #707070 2px;
+}
+
+.absec__button--left{
+    border-left: solid #707070 2px;
+}
+
+.absec__button.is__active{
+	background-color:#840E0E;
+    border-bottom: solid #840E0E 2px;
+	transition: all 0.2s ease-out;
+}
+
+.absec__det{
+    display: none;
+}
+
+.is__show{
+    display: block;
+}
+
+.absec__det--one{
+    width: 940px;
+    height: 387px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.absec__det--one p{
+    font-size: 20px;
+}
+
+.absec__det--one h3{
+    font-size: 24px;
+    text-align: right;
+    margin-top: 45px;
+}
+
+.absec__det--two{
+    width: 940px;
+    height: 387px;
+    margin: 0 auto;
+    margin-top: 60px;
+}
+
+.absec__det--two p{
+    font-size: 20px;
+}
+
+.absec__det--two h3{
+    font-size: 24px;
+    text-align: right;
+    margin-top: 145px;
+}
+
+/* service.html */
+/* 屋台一覧 */
+.sertop__sent{
+    width: 840px;
+    margin: 0 auto;
+    margin-top: 90px;
+    margin-bottom: 200px;
+}
+
+.sertop__sent p{
+    font-size: 20px;
+}
+
+.sertop__sent--one{
+    display: block;
+}
+
+.sertop__sent--two{
+    display: none;
+}
+
+/* アイキャッチ */
+.sereye{
+    width: 100%;
+    height: 800px;
+    object-position: 10% 80%;
+    object-fit: cover;
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
+}
+
+/* 屋台詳細 */
+.serdet__master{
+    margin-top: 200px;
+}
+
+#serdet__arrow{
+    position: relative;
+    cursor: pointer;
+    cursor: hand;
+}
+
+#serdet__right{
+    position: absolute;
+    top: 130px;
+    left: 1026px;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-top: solid 1px  #F4F4F4 ;
+    border-right: solid 1px #F4F4F4 ;
+    transform: rotate(45deg);
+}
+
+#serdet__left{
+    position: absolute;
+    top: 130px;
+    right: 1026px;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 32px;
+    height: 32px;
+    border-top: solid 1px #F4F4F4 ;
+    border-right: solid 1px #F4F4F4 ;
+    transform: rotate(-135deg);
+}
+
+.serdet{
+    width: 100%;
+    height: 260px;
+}
+
+
+.serdet__close{
+    display: none;
+}
+
+.serdet__open{
+    display: block;
+}
+
+.serdet__anime{
+    animation-name: fadeInAnime;
+    animation-fill-mode:backwards;
+    animation-duration:1s;
+    animation-iteration-count:1;
+    animation-timing-function:ease;
+    animation-delay: 0s;
+    animation-direction:normal;
+}
+
+@keyframes fadeInAnime{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.serdet__choise{
+    display: flex;
+    justify-content: space-between;
+}
+
+.serdet__choise img{
+    width: 500px;
+    height: 260px;
+    margin-right: 80px;
+}
+
+.serdet__til{
+    font-size: 24px;
+}
+
+.serdet__pri{
+    text-align: right;
+    font-size: 20px;
+}
+
+.serimg__pic{
+    width: 130.01px;
+    height: 108.27px;
+    object-fit: cover;
+    clip-path: polygon(0 0, 100% 13%, 100% 100%, 0 87%);
+}
+
+.serimg__box--up{
+    display: flex;
+    margin-bottom: 26.96px;
+}
+
+.serimg__box--down{
+    display: flex;
+    position: relative;
+    left: 290px;
+}
+
+.serimg__til{
+    transform: rotate(5deg);
+    font-size: 10px;
+}
+
+.serimg__subt{
+    transform: rotate(5deg);
+    font-size: 12px;
+}
+
+.serimg__master{
+    margin-top: 89.5px;
+    margin-bottom: 258.97px;
+}
+
+.serimg__poup{
+    margin: 15px 0 0 15px;
+}
+
+.serimg__poup--one{
+    margin-top: 30px;
+}
+
+.serimg__poup--two{
+    margin-top: 45px;
+}
+
+.serimg__poup--three{
+    margin-top: 60px;
+}
+
+.serimg__poup--four{
+    margin-top: 75px;
+}
+
+.serimg__podown{
+    margin: 15px 0 0 15px;
+}
+
+.serimg__podown--one{
+    margin-top: 30px;
+}
+
+.serimg__podown--two{
+    margin-top: 45px;
+}
+
+.serimg__podown--three{
+    margin-top: 60px;
+}
+
+/* blog.html */
+/* ブログトップ */
+.blgtop__sent{
+    width: 860px;
+    margin: 90px auto 200px auto;
+}
+
+.blgtop__sent--pc{
+    display: block;
+}
+
+.blgtop__sent--res{
+    display: none;
+}
+
+.blgtop__sent p{
+    font-size: 20px;
+    text-align: center;
+}
+
+/* アイキャッチ */
+.blgeye{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: 50% 45%;
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
+}
+
+/* ブログ一覧 */
+.blgsele__nav{
+    width: 442px;
+    display: flex;
+    justify-content: space-between;
+    margin: 200px auto 60px auto;
+}
+
+.blgsele__item--oneone{
+    width: 72px;
+    height: 32px;
+    background-color: #840E0E;
+    text-align: center;
+    line-height: 32px;
+}
+
+
+.blgsele__item--two{
+    width: 120px;
+    height: 32px;
+    border: solid #FFFFFF 1px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.blgsele__item--two:hover{
+    background-color: #840E0E;
+    border: solid #840E0E 1px;
+}
+
+.blgsele__item--three{
+    width: 72px;
+    height: 32px;
+    border: solid #FFFFFF 1px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.blgsele__item--three:hover{
+    background-color: #840E0E;
+    border: solid #840E0E 1px;
+}
+
+.blgsele__item--four{
+    width: 88px;
+    height: 32px;
+    border: solid #FFFFFF 1px;
+    text-align: center;
+    line-height: 32px;
+}
+
+.blgsele__item--four:hover{
+    background-color: #840E0E;
+    border: solid #840E0E 1px;
+}
+
+.blgsele__nav a:hover{
+    background-color: #840E0E;
+}
+
+.blgsele__p--pc{
+    display: block;
+}
+
+.blgsele__p--res{
+    display: none;
+}
+
+/* ブログイメージセレクト */
+.blgsele__box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.blgsele__pic{
+    position: relative;
+}
+
+.blgsele__pic--mg{
+    margin-top: 40px;
+}
+
+.blgsele__pic img{
+    width: 220px;
+    height: 288.2px;
+    object-fit: cover;
+}
+
+.blgsele__pic h6{
+    width: 150px;
+    height: 17px;
+    position: absolute;
+    font-size: 12px;
+    top: 180.2px;
+    left: 54px;
+    text-align: right;
+    font-weight: normal;
+}
+
+.blgsele__pic p{
+    position: absolute;
+    top: 205px;
+    left: 16px;
+    font-weight: normal;
+}
+
+.blgsele__number{
+    width: 449px;
+    height: 42px;
+    line-height: 42px;
+    margin: 120px auto 200px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blgsele__item{
+    width: 29px;
+    height: 42px;
+    border: solid #FFFFFF 1px;
+    text-align: center;
+    line-height: 42px;
+}
+
+.blgsele__item--hv:hover{
+    background-color: #840E0E;
+    border: solid #840E0E 1px;
+}
+
+.blgsele__item--arrow a{
+    position: relative;
+    bottom: 2px;
+}
+
+.blgsele__item--ten a{
+    position: relative;
+    bottom: 3px;
+}
+
+.blgsele__item--one{
+    width: 29px;
+    height: 42px;
+    text-align: center;
+    line-height: 42px;
+    background-color: #840E0E;
+}
+
+/* access.html */
+/* アクセス */
+.actop__sent--pc{
+    display: none;
+}
+
+.actop__sent--res{
+    display: block;
+}
+
+.actop__sent{
+    font-size: 20px;
+    width: 780px;
+    margin: 90px auto 200px auto;
+    text-align: center;
+}
+
+.aceye{
+    width: 100%;
+    height: 800px;
+    object-fit: cover;
+    object-position: 60% 100%;
+    clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0 90%);
+}
+
+.acdet__til{
+    font-size: 32px;
+    text-align: center;
+    margin: 200px 0 60px 0;
+}
+
+.acdet__box{
+    margin: 120px 0 200px 0;
+}
+
+.acdet__item{
+    width: 510px;
+    margin-bottom: 30px;
+    border-bottom: solid #840E0E 1px;
+    line-height: 30px;
+}
+
+.acdet__item--pc{
+    display: block;
+    width: 510px;
+    margin-bottom: 30px;
+    border-bottom: solid #840E0E 1px;
+    line-height: 30px;
+}
+
+.acdet__item--res{
+    display: none;
+}
+
+.acdet__sp{
+    display: inline-block;
+    width: 91px;
+    height: 30px;
+    background-color: #840E0E;
+    text-align: center;
+    border-radius: 0px 10px 10px 0px;
+    margin-right: 16px;
+}
+
+.iframe__pc{
+    display: block;
+}
+
+.iframe__res{
+    display: none;
+}
+
+.acdet__iframe--pc{
+    display: block;
+}
+
+.acdet__iframe--res{
+    display: none;
+}
+
+/* レスポンシブ対応 */
+@media screen and (max-width: 375px) {
+    /* 共通 */
+    .button{
+        width: 122.4px;
+        height: 33px;
+        margin-top: 60px;
+    }
+
+    .button a{
+        display: block;
+        height: 33px;
+        line-height: 33px;
+        font-size: 14px;
+    }
+
+    .button a::after{
+        margin: 0 0 0 20px;
+    }
+
+    /* ハンバーガーメニュー */
+    /* ハンバーガーメニュー：全体の要素 */
+    .head__hamburger{
+        display: block;
+        position: absolute;
+        top: 10px;
+        left: 290px;
+        width: 50px;
+        height: 30px;
+        cursor: pointer;
+        z-index: 1;
+    }
+
+    /* ハンバーガーメニュー：線の要素 */
+    .head__inner{
+        height: 1px;
+        position: absolute;
+        background-color: #ffffff;
+        transition: .5s;
+    }
+
+    /* ハンバーガーメニュー：各線の位置と横幅 */
+    .line__one{
+        width: 50px;
+        top: 0;
+    }
+
+    .line__two{
+        width: 30px;
+        top: 12px;
+        left: 20px;
+    }
+
+    .line__three{
+        width: 20px;
+        top: 24px;
+        left: 30px;
+    }
+
+    /* ハンバーガメニュー：ナビメニュー表示時の線 */
+    .line__one--after{
+        transform: translateY(10px) rotate(-45deg);
+        width: 20px;
+        left: 30px;
+    }
+
+    .line__two--after{
+        opacity: 0;
+    }
+
+    .line__three--after{
+        transform: translateY(-14px) rotate(45deg);
+        width: 20px;
+    }
+
+    /* ナビゲーションメニュー */
+    #head__list{
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        left: 100%;
+        top: 45px;
+        background: #151515;
+        transition: .7s;
+        z-index: 50;
+    }
+
+    .in{
+        transform: translateX(-100%);
+    }
+
+    .head__nav{
+        display: flex;
+        flex-flow: column;
+        width: 180px;
+        margin: 0 auto;
+        padding-top: 30px;
+    }
+
+    .head__nav li{
+        font-size: 20px;
+        text-align: center;
+        margin-bottom: 45px;
+    }
+
+    .head__item{
+        height: 28px;
+        margin: 0;
+    }
+
+    .head__snsdis{
+        display: block;
+    }
+
+    .head__sns{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+        margin: 0 auto;
+    }
+
+    .head__sns li{
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+        cursor: hand;
+    }
+
+    /* ヘッダーメニュー  */
+    .content{
+    width: 375px;
+    margin: 0 auto;
+    }
+
+    .head__img{
+        width: 160px;
+        margin-left: 25px;
+    }
+
+    .head{
+        height: 45px;
+        line-height: 45px;
+    }
+
+    .head__line{
+        height: 45px;
+    }
+
+    .main__fixed{
+        padding-top: 45px;
+    }
+
+    /* slider slick レスポンシブ対応 */
+    .slider{
+        height: 215px;
+    }
+
+    .slick-dots li button:before{
+        height: 50%!important;
+        width: 50%!important;
+    }
+
+    /* 最新情報 */
+    .topinfo{
+        margin-bottom: 45px;
+    }
+
+    .topinfo__til{
+        font-size: 20px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+    }
+
+    .topinfo__detail{
+        margin-left: 25px;
+    }
+
+    .topinfo__new{
+        font-size: 14px;
+    }
+
+    .topinfo__sent--one{
+        width: 306px;
+        height: 46px;
+        margin: 16px 0 30px 0;
+    }
+
+    .topinfo__sent--two{
+        width: 325px;
+        height: 46px;
+        margin: 16px 0 30px 0;
+    }
+
+    .topinfo__sent--three{
+        width: 325px;
+        height: 45px;
+        margin-top: 16px;
+    }
+
+    /* わいず祭りについて */
+    .topab{
+        height: 600px;
+    }
+
+    .topab::before {
+        clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%);
+    }
+
+    .topab__til{
+        font-size: 20px;
+    }
+
+    .topab__det{
+        margin: 0 auto;
+        padding-top: 0px;
+    }
+
+    .topab{
+        padding-top: 90px;
+    }
+
+    .topab__pic{
+        display: none;
+    }
+
+    .topab__sent{
+        display: none;
+    }
+
+    .topab__sent--res{
+        display: block;
+        width: 325px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    /* トップアイキャッチvol.1 */
+    .topeye{
+        height: 400px;
+    }
+
+    /* 屋台一覧 */
+
+    .sertop::before{
+        clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    }
+
+    .sertop__til{
+        font-size: 20px;
+    }
+
+    .sertop__sedet--pc{
+        display: none;
+    }
+
+    .sertop__sedet--res{
+        display: block;
+        text-align: center;
+        width: 325px;
+        height: 108px;
+        margin: 0 auto;
+    }
+
+    .sertop__visual--pc{
+        display: none;
+    }
+
+    /* .sertop__img{
+        width: 120px;
+        height: 80px;
+        object-fit: cover;
+    } */
+
+    .sertop__visual--res{
+        display: block;
+    }
+
+    .sertop__visual--res img{
+    width:140px;
+    height:100px;
+    object-fit: cover;
+    }
+
+    .sertop__marg{
+        margin-top: 60px;
+    }
+
+    /* ブログ一覧 */
+    .topblog__box{
+        display: flex;
+        flex-flow: column;
+        width: 325px;
+        height: auto;
+        margin: 0 auto 30px auto;
+        color: #000000;
+    }
+
+    .topblog__img{
+        width: 275px;
+        height: 190px;
+        margin-bottom: 14px;
+        object-fit: cover;
+    }
+
+    .topblog__sent{
+        display: none;
+    }
+
+    .topblog__sent--res{
+        display: block;
+        padding-left: 25px;
+    }
+
+    .topblog__sent--res h3{
+        font-size: 16px;
+        width: 275px;
+        margin-bottom: 14px;
+        text-decoration: underline;
+        text-decoration-color: #000000;
+    }
+
+    .topblog__sent--res p{
+        width: 275px;
+        font-size: 14px;
+        padding-bottom: 30px;
+    }
+
+    .button__blog{
+        margin-bottom: 40px;
+    }
+
+    /* アイキャッチ vol.2 */
+    .topeye__clip--two{
+        clip-path: polygon(0 0, 100% 5%, 100% 95%, 0% 100%);
+    }
+
+    /* アクセス */
+    .topacs{
+        height: 886px;
+    }
+
+    .topacs::before {
+        content: '';
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        left: 0;
+        right: 0;
+        background-color: #840E0E;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+        z-index: -1;
+    }
+
+    .topacs__til{
+        font-size: 20px;
+        padding-top: 90px;
+        margin-bottom: 30px;
+    }
+
+    .topacs__dl{
+        width: 325px;
+        margin: 0 auto;
+        display: flex;
+        flex-flow: column;
+    }
+
+    .topacs__item{
+        font-size: 14px;
+        border-bottom: #840E0E;
+    }
+
+    .topacs__item--pc{
+        display: none;
+    }
+
+    .topacs__item--res{
+        display: block;
+        font-size: 14px;
+        margin-bottom: 30px;
+        border-bottom: #840E0E;
+    }
+
+    .topacs__sp{
+        display: block;
+        width: 77px;
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 14px;
+    }
+
+    .iframe__pc{
+        display: none;
+    }
+
+    .iframe__res{
+        display: block;
+        margin-bottom: 30px;
+    }
+
+    /* フッター */
+    .foot__cr{
+        margin-top: 30px;
+    }
+
+    /* わいず祭りについて */
+    /* わいず祭りについて */
+    .category{
+        display: none;
+    }
+
+    .abtop{
+        height: 445px;
+    }
+
+    .abtop__visual{
+        width: 375px;
+        height: 215px;
+    }
+
+    .abtop__visual img{
+        height: 215px;
+        object-fit: cover;
+    }
+
+    .abtop__ab{
+        font-size: 20px;
+        height: 47px;
+        line-height: 47px;
+        top: 84px;
+    }
+
+    .abtop__det{
+        width: 325px;
+        height: 145px;
+        margin: 0 auto;
+        padding-top: 60px;
+    }
+
+    .abtop__sent{
+        text-align: left;
+        font-size: 14px;
+    }
+
+    .abeye{
+        height: 300px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+        margin: 40px 0;
+    }
+
+    .absec__til{
+        font-size: 20px;
+    }
+
+    .absec__box{
+        width: 325px;
+        height: 806px;
+        margin: 0 auto 90px auto;
+    }
+
+    .absec__tag{
+        height: 28px;
+    }
+
+    .absec__tag h3{
+        font-size: 14px;
+        height: 28px;
+        line-height: 28px;
+    }
+
+    .absec__sent{
+        padding-top: 28px;
+    }
+
+    .absec__det{
+        width: 285px;
+        margin-top: 0px;
+    }
+
+    .absec__det p, .absec__det h3{
+        font-size: 14px;
+    }
+
+    .absec__det h3{
+        margin-top: 30px;
+    }
+
+    /* 屋台一覧 */
+    /* 屋台一覧 */
+    .sertop__sent{
+        width: 325px;
+        margin: 60px auto 40px auto
+    }
+
+    .sertop__sent--one{
+        display: none;
+    }
+
+    .sertop__sent--two{
+        display: block;
+    }
+
+    .sertop__sent p{
+        font-size: 14px;
+    }
+
+    /* アイキャッチ */
+    .sertop__res{
+        padding-bottom: 40px;
+    }
+
+    .sereye{
+        width: 375px;
+        height: 300px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    }
+
+    .serdet__choise{
+        display: flex;
+        flex-flow: column;
+        width: 260px;
+        margin: 0 auto;
+    }
+
+    .serdet__choise img{
+        height: 220px;
+        object-fit: cover;
+    }
+
+    .serdet__sent{
+        margin-top: 30px;
+    }
+
+    .serdet__sent p{
+        font-size: 14px;
+        margin-top: 14px;
+    }
+
+    .serdet__til{
+        font-size: 18px;
+    }
+
+    .serdet__pri{
+        font-size: 14px;
+    }
+
+    #serdet__right{
+        top: 205px;
+        left: 315px;
+    }
+
+    #serdet__left{
+        top: 205px;
+        left: 25px;
+    }
+
+    .serdet__master{
+        margin-top: 40px;
+    }
+
+    .serimg__box--up{
+        width: 325px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+    }
+
+    .serimg__box--down{
+        width: 325px;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        left: 0px;
+    }
+
+    .serimg__pic{
+        width: 100px;
+        height: 70px;
+        object-fit: cover;
+        clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
+    }
+
+    .serimg__til{
+        transform: rotate(7deg);
+        font-size: 10px;
+    }
+    
+    .serimg__subt{
+        transform: rotate(7deg);
+        font-size: 12px;
+    }
+
+    .serimg__poup{
+        margin: 12.5px 0 0 12.5px;
+    }
+
+    .serimg__poup--one{
+        margin-top: 27.5px;
+    }
+    
+    .serimg__poup--two{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    
+    .serimg__poup--three{
+        margin-top: 15px;
+    }
+    
+    .serimg__poup--four{
+        margin-top: 30px;
+    }
+    
+    .serimg__podown{
+        margin: 12.5px 0 0 12.5px;
+    }
+    
+    .serimg__podown--one{
+        margin-top: 27.5px;
+    }
+    
+    .serimg__podown--two{
+        margin-top: 0px;
+        margin-left: 0px;
+    }
+    
+    .serimg__podown--three{
+        margin-top: 15px;
+    }
+
+    .serdet{
+        height: auto;
+    }
+
+    .serimg__master{
+        margin: 60px 0 110px 0;
+    }
+
+    .serimg__subt{
+        width: 90px;
+    }
+
+    /* ブログ */
+    /* ブログ */
+    .blgtop__sent{
+        width: 325px;
+        margin: 60px auto 40px auto;
+    }
+
+    .blgtop__sent--pc{
+        display: none;
+    }
+
+    .blgtop__sent--res{
+        display: block;
+    }
+
+    .blgtop__sent p{
+        font-size: 14px;
+        text-align: left;
+    }
+
+    /* アイキャッチ */
+    .blgeye{
+        height: 300px;
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+    }
+
+    /* ブログ一覧 */
+    .blgsele__nav{
+        width: 325px;
+        flex-wrap: wrap;
+        margin: 57px auto 40px auto;
+    }
+
+    .blgsele__item--four{
+        margin-top: 20px;
+    }
+
+    /* ブログイメージセレクト */
+    .blgsele__box{
+        width: 325px;
+        margin: 0 auto;
+    }
+
+    .blgsele__pic{
+        width: 150px;
+        height: 219px;
+    }
+
+    .blgsele__pic img{
+        width: 150px;
+        height: 219px;
+        object-fit: cover;
+    }
+
+    .blgsele__pic p{
+        font-size: 14px;
+        top: 145px;
+        left: 10px;
+        right: 10px;
+    }
+
+    .blgsele__pic h6{
+        top: 125.2px;
+        left: 0px;
+    }
+
+    .blgsele__p--pc{
+        display: none;
+    }
+
+    .blgsele__p--res{
+        display: block;
+    }
+
+    .blgsele__pic--mg{
+        margin-top: 25px;
+    }
+
+    .blgsele__pic--mgres{
+        margin-top: 25px;
+    }
+
+    /* ナンバーセレクト */
+    .blgsele__number{
+        width: 325px;
+        margin: 60px auto 90px auto;
+    }
+
+    /* アクセス */
+    /* アクセストップ */
+    .actop__sent{
+        width: 325px;
+        height: auto;
+        margin: 60px auto 40px auto;
+    }
+
+    .actop__sent--pc{
+        display: none;
+    }
+
+    .actop__sent--res{
+        display: block;
+    }
+
+    .actop__sent p{
+        font-size: 14px;
+        text-align: left;
+    }
+
+    /* アイキャッチ */
+    .aceye{
+        clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+        height: 300px;
+    }
+
+    /* マップ詳細 */
+    .acdet{
+        width: 325px;
+        margin: 0 auto;
+    }
+
+    .acdet__til{
+        font-size: 20px;
+        margin: 37px 0 56px 0;
+    }
+
+    .acdet__iframe--pc{
+        display: none;
+    }
+
+    .acdet__iframe--res{
+        display: block;
+    }
+
+    .acdet__iframe--res iframe{
+        left: 25px;
+    }
+
+    .acdet__box{
+        margin: 60px 0 90px 0;
+        font-size: 14px;
+    }
+
+    .acdet__sp{
+        margin-bottom: 16px;
+        display: block;
+    }
+
+    .acdet__item{
+        border-bottom: 0px;
+    }
+
+    .acdet__item--pc{
+        display: none;
+    }
+
+    .acdet__item--res{
+        display: block;
+        margin-bottom: 30px;
+        border-bottom: 0px;
+    }
+}

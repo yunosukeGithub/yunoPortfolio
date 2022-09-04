@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+
+// ここは全てのSCSSファイルで@useをするので、必ず使用する自作関数はここに記しておく。
+// 自作関数 レスポンシブ対応
+@function sp($pxValue){
+    $spBreakPoint: 375;
+    @return (($pxValue/$spBreakPoint) * 100) + vw;
+}
+
+// 使用する色
+$white_color: #FFFFFF;
+$blue_color: #1558A0;
+$lightblue_color: #116BCC;
+$cyan_color: #4989CE;
+$green_color: #5BC600;
+$orange_color: #EB6D00;
+$purple_color: #692FAD;
+$black_color: #333333;
+$red_Color: #E52323;
+$yellow_color: #FFE941;
+$dark_color: #3E1C65;
+$brown_color: #A02020;
+$darkgreen_color: #23761B;
+$pink_color: #E523DE;
+$gray_color: #EBEBEB;
+$darkgray_color: #B9B9B9;
+$darkyellow_color: #AA9B2C;
+$hoveryellow_color: #FFF189;
+
+// メディアクエリ
+$breakpoint: (
+  tab: 'screen and (min-width: 769px)',
+  pc: 'screen and (min-width: 1025px)',
+  max: 'screen and (min-width: 1280px)'
+);
+
+@mixin mq($bp) {
+    @media #{map-get($breakpoint, $bp)} {
+     @content;
+    }
+  }
